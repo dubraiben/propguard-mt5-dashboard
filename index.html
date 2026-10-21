@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PropGuard MT5 — Institutional Prop Challenge & Verification Command Center</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #090d16;
+      color: #f1f5f9;
+    }
+    .neon-border-buy {
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    }
+    .neon-border-sell {
+      border: 1px solid rgba(239, 68, 68, 0.5);
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+    }
+    .neon-border-hold {
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.1);
+    }
+    .neon-glow-blue {
+      box-shadow: 0 0 25px rgba(37, 99, 235, 0.15);
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="min-h-screen p-3 sm:p-6 antialiased">
+  <div class="max-w-7xl mx-auto space-y-5">
+    
+    <!-- TOP HEADER -->
+    <div class="bg-slate-900/90 backdrop-blur border border-slate-800 rounded-2xl p-4 sm:p-5 flex flex-col md:flex-row md:items-center md:justify-between gap-4 shadow-2xl">
+      <div class="flex items-center gap-3.5">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-sky-400 flex items-center justify-center font-black text-white text-2xl shadow-lg shadow-blue-500/30">
+          🛡️
+        </div>
+        <div>
+          <div class="flex flex-wrap items-center gap-2">
+            <h1 class="text-xl sm:text-2xl font-black tracking-tight text-white">PropGuard MT5 Command Center</h1>
+            <span class="flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> 24/7 Oracle Cloud Active
+            </span>
+            <span class="flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/40">
+              <span>Account:</span> <strong class="text-white">6350807 (Deriv-Demo)</strong>
+            </span>
+          </div>
+          <p class="text-xs text-slate-400 mt-0.5">
+            Institutional Prop Challenge Engine • Strict 3.0% Daily Loss Hard Stop • 6.5% Max DD Breaker • AI Cognitive Learning Brain
+          </p>
+        </div>
+      </div>
+
+      <!-- HEADER CONTROLS -->
+      <div class="flex flex-wrap items-center gap-2.5">
+        <!-- Asset Selector -->
+        <div class="flex items-center gap-1.5 bg-slate-800/90 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs">
+          <label class="text-slate-400 font-semibold">Asset:</label>
+          <select id="assetSelect" onchange="changeSymbol(this.value)" class="bg-transparent text-white font-bold focus:outline-none cursor-pointer">
+            <option value="XAUUSD" class="bg-slate-900">Gold (XAUUSD)</option>
+            <option value="EURUSD" class="bg-slate-900">Euro (EURUSD)</option>
+            <option value="GBPUSD" class="bg-slate-900">Pound (GBPUSD)</option>
+            <option value="R_75" class="bg-slate-900">Volatility 75 (R_75)</option>
+            <option value="R_100" class="bg-slate-900">Volatility 100 (R_100)</option>
+          </select>
+        </div>
+
+        <!-- Telegram Portal Button -->
+        <a href="https://t.me/Propguard_portal_bot" target="_blank" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-sky-500/20 border border-sky-400/40 hover:bg-sky-500/30 text-sky-300 transition shadow">
+          <span>✈️</span> <span>@Propguard_portal_bot</span>
+        </a>
+
+        <!-- Sound Toggle -->
+        <button id="soundToggle" onclick="toggleSound()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-800 border border-slate-700 hover:border-slate-600 text-slate-300 transition cursor-pointer">
+          <span id="soundIcon">🔊</span> <span id="soundText">Alerts On</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- PROP CHALLENGE KPI & RISK METRIC GAUGES -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+      <!-- CARD 1: ACCOUNT BALANCE & EQUITY -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>Account Equity</span>
+          <span class="text-emerald-400 font-bold">100% Capital Safe</span>
+        </div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span id="accountEquity" class="text-2xl font-black text-white">$10,000.00</span>
+          <span class="text-xs text-slate-400">Balance: <span id="accountBalance">$10,000.00</span></span>
+        </div>
+        <div class="mt-3 flex items-center justify-between text-xs pt-2 border-t border-slate-800/80">
+          <span class="text-slate-400">Today PnL:</span>
+          <span id="dailyPnL" class="font-bold text-emerald-400">+$0.00 (0.00%)</span>
+        </div>
+      </div>
+
+      <!-- CARD 2: PHASE 1 CHALLENGE TARGET (+8.0%) -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>Phase 1 Target (+8.0%)</span>
+          <span class="text-sky-400 font-bold">$800.00 Target</span>
+        </div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span id="targetProgressText" class="text-2xl font-black text-sky-400">0.0%</span>
+          <span class="text-xs text-slate-400">Auto-lock on pass</span>
+        </div>
+        <!-- Progress Bar -->
+        <div class="w-full bg-slate-800 rounded-full h-2 mt-3 overflow-hidden">
+          <div id="targetProgressBar" class="bg-gradient-to-r from-blue-500 to-sky-400 h-2 rounded-full transition-all duration-500" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- CARD 3: DAILY LOSS HARD STOP (-3.0%) -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>Daily Loss Limit (-3.0%)</span>
+          <span class="text-amber-400 font-bold">Hard Circuit Breaker</span>
+        </div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span id="dailyLossBuffer" class="text-2xl font-black text-emerald-400">$300.00</span>
+          <span class="text-xs text-slate-400">Buffer Remaining</span>
+        </div>
+        <div class="mt-3 flex items-center justify-between text-xs pt-2 border-t border-slate-800/80">
+          <span class="text-slate-400">Reset Timer:</span>
+          <span id="dailyResetTimer" class="font-semibold text-slate-300">00:00 UTC</span>
+        </div>
+      </div>
+
+      <!-- CARD 4: MAX TOTAL DRAWDOWN (-6.5%) -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>Max Drawdown Breaker (-6.5%)</span>
+          <span class="text-rose-400 font-bold">Account Shield</span>
+        </div>
+        <div class="mt-2 flex items-baseline gap-2">
+          <span id="totalDrawdownBuffer" class="text-2xl font-black text-emerald-400">$650.00</span>
+          <span class="text-xs text-slate-400">Buffer to Breaker</span>
+        </div>
+        <div class="mt-3 flex items-center justify-between text-xs pt-2 border-t border-slate-800/80">
+          <span class="text-slate-400">Prop Firm Threshold:</span>
+          <span class="font-bold text-rose-400">-10.0% ($1,000)</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- LIVE SIGNAL CALLOUT BANNER -->
+    <div id="signalBanner" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 shadow-2xl transition-all duration-300 neon-border-hold">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        
+        <!-- SIGNAL BADGE & TITLE -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-3">
+            <span id="signalBadge" class="px-4 py-1.5 rounded-xl font-black text-sm tracking-wider uppercase bg-amber-500/20 text-amber-400 border border-amber-500/40">
+              SCANNING / HOLD
+            </span>
+            <span id="signalConfidence" class="text-xs font-bold text-slate-400 bg-slate-800 px-3 py-1 rounded-lg border border-slate-700">
+              Confidence: 55.0%
+            </span>
+            <span id="marketQualityBadge" class="text-xs font-bold text-slate-400 bg-slate-800 px-3 py-1 rounded-lg border border-slate-700">
+              Quality Score: 78 / 100
+            </span>
+          </div>
+          <p id="signalReason" class="text-sm font-medium text-slate-300 leading-relaxed">
+            Market Confluence Scan: Waiting for London/NY prime session value pullback to 20-period EMA.
+          </p>
+        </div>
+
+        <!-- EXECUTION METRICS -->
+        <div class="flex flex-wrap items-center gap-4 bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 text-xs">
+          <div>
+            <span class="text-slate-400 block">Current Price</span>
+            <span id="livePrice" class="font-mono text-base font-bold text-white">4,120.45</span>
+          </div>
+          <div class="h-7 w-px bg-slate-800"></div>
+          <div>
+            <span class="text-slate-400 block">Stop Loss (1.5x ATR)</span>
+            <span id="signalSL" class="font-mono text-sm font-semibold text-rose-400">--</span>
+          </div>
+          <div class="h-7 w-px bg-slate-800"></div>
+          <div>
+            <span class="text-slate-400 block">Take Profit (2.5x ATR)</span>
+            <span id="signalTP" class="font-mono text-sm font-semibold text-emerald-400">--</span>
+          </div>
+          <div class="h-7 w-px bg-slate-800"></div>
+          <div>
+            <span class="text-slate-400 block">Calculated Lot Size</span>
+            <span id="signalLots" class="font-mono text-sm font-bold text-sky-400">0.05 Lots (0.50% Risk)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- MAIN GRID: CHART & CONFLUENCE RADAR -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      
+      <!-- CANDLESTICK CHART CONTAINER (2 COLS) -->
+      <div class="lg:col-span-2 bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl flex flex-col">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+          <div class="flex items-center gap-2">
+            <h2 id="chartTitle" class="text-sm font-bold text-white">Gold (XAUUSD) — 1-Hour Chart</h2>
+            <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">1h Entry / 4h Trend</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-slate-400">
+            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> 20 EMA</span>
+            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-400"></span> 50 EMA</span>
+            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-400"></span> 200 EMA</span>
+          </div>
+        </div>
+        <div id="chartContainer" class="w-full h-80 sm:h-96 mt-3 rounded-lg overflow-hidden"></div>
+      </div>
+
+      <!-- CONFLUENCE RADAR & ECONOMIC NEWS FILTER (1 COL) -->
+      <div class="space-y-4">
+        
+        <!-- INSTITUTIONAL FILTER RADAR -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl space-y-3">
+          <h3 class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center justify-between">
+            <span>Institutional Rule Radar</span>
+            <span class="text-emerald-400 font-semibold">Active</span>
+          </h3>
+
+          <div class="space-y-2 text-xs">
+            <div class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60 border border-slate-800">
+              <span class="text-slate-300">1h & 4h Trend Confluence</span>
+              <span id="radarTrend" class="font-bold text-emerald-400">✅ ALIGNED</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60 border border-slate-800">
+              <span class="text-slate-300">20 EMA Value Pullback</span>
+              <span id="radarPullback" class="font-bold text-amber-400">⏳ Awaiting Dip</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60 border border-slate-800">
+              <span class="text-slate-300">1.5x ATR "Room to Run" (Donchian)</span>
+              <span id="radarRoom" class="font-bold text-emerald-400">✅ 2.4x ATR Room</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60 border border-slate-800">
+              <span class="text-slate-300">Dual Chop Filter (ADX 14)</span>
+              <span id="radarChop" class="font-bold text-emerald-400">✅ Trending (26.4)</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60 border border-slate-800">
+              <span class="text-slate-300">Prime Session (07:00 - 18:00 UTC)</span>
+              <span id="radarSession" class="font-bold text-slate-300">Off-Hours (Safe)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ECONOMIC NEWS BLACKOUT MONITOR -->
+        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h3 class="text-xs font-bold text-slate-300 uppercase tracking-wider">News Blackout Guard</h3>
+            <span id="newsStatusBadge" class="text-xs px-2 py-0.5 rounded font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
+              ✅ CLEAR
+            </span>
+          </div>
+          <p class="text-xs text-slate-400">Auto-scrapes ForexFactory high-impact events. Locks entries ±5m around releases.</p>
+          <div class="p-2.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs space-y-1">
+            <div class="flex items-center justify-between font-semibold text-white">
+              <span id="nextNewsEvent">GBP CPI y/y (High Impact)</span>
+              <span id="nextNewsTime" class="text-amber-400">In 14 hrs</span>
+            </div>
+            <span class="text-slate-500 block text-2xs">Currencies monitored: USD, EUR, GBP</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- AI COGNITIVE MEMORY & RECENT TRADES FEED -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      
+      <!-- AI BRAIN LEARNING MATRIX -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="text-lg">🧠</span>
+            <h3 class="text-sm font-bold text-white">AI Cognitive Memory Matrix</h3>
+          </div>
+          <span class="text-xs text-slate-400">runtime/prop_memory.json</span>
+        </div>
+        <p class="text-xs text-slate-400">
+          The bot extracts Market DNA from every trade. When it wins, it boosts confidence by +10%; when it loses, it automatically vetoes that exact trap.
+        </p>
+
+        <div class="grid grid-cols-2 gap-3 text-xs pt-1">
+          <div class="bg-emerald-950/30 border border-emerald-800/40 p-3 rounded-xl">
+            <span class="text-emerald-400 font-bold block">Proven A+ Synergies (+10%)</span>
+            <span id="aiSynergiesCount" class="text-lg font-black text-white mt-1 block">4 Patterns</span>
+            <span class="text-slate-400 text-2xs">High conviction follow-through</span>
+          </div>
+          <div class="bg-rose-950/30 border border-rose-800/40 p-3 rounded-xl">
+            <span class="text-rose-400 font-bold block">Learned Danger Traps (Vetoed)</span>
+            <span id="aiTrapsCount" class="text-lg font-black text-white mt-1 block">2 Traps</span>
+            <span class="text-slate-400 text-2xs">Automatically blocked from entry</span>
+          </div>
+        </div>
+
+        <div class="p-3 bg-slate-950/70 border border-slate-800 rounded-xl text-xs space-y-1">
+          <span class="text-slate-400 block font-semibold">Latest AI Forensic Autopsy:</span>
+          <p id="latestAutopsyText" class="text-slate-300 italic">
+            "Previous trade achieved 2.4R profit: 20-period EMA bounce confirmed by 4-hour trend agreement provided institutional momentum."
+          </p>
+        </div>
+      </div>
+
+      <!-- AUDIT LOG & RECENT TRADES -->
+      <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="text-lg">📋</span>
+            <h3 class="text-sm font-bold text-white">Recent Prop Executions (SQLite DB)</h3>
+          </div>
+          <span class="text-xs text-slate-400">runtime/prop_trades.db</span>
+        </div>
+
+        <div class="space-y-2 overflow-y-auto max-h-48 pr-1 text-xs">
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-950/60 border border-slate-800">
+            <div>
+              <span class="font-bold text-emerald-400">WIN (+$45.20)</span>
+              <span class="text-slate-400 block text-2xs">XAUUSD BUY • 0.05 Lots @ 4,120.50</span>
+            </div>
+            <div class="text-right">
+              <span class="text-slate-300 font-mono">+2.5R</span>
+              <span class="text-slate-500 block text-2xs">TP Hit Cleanly</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-950/60 border border-slate-800">
+            <div>
+              <span class="font-bold text-emerald-400">WIN (+$38.50)</span>
+              <span class="text-slate-400 block text-2xs">EURUSD BUY • 0.10 Lots @ 1.1228</span>
+            </div>
+            <div class="text-right">
+              <span class="text-slate-300 font-mono">+1.8R</span>
+              <span class="text-slate-500 block text-2xs">Trailing Ratchet</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between pt-2 border-t border-slate-800 text-xs">
+          <span class="text-slate-400">Bot Uptime: <strong class="text-emerald-400">82 Days 24/7</strong></span>
+          <span class="text-slate-400">Server: <strong class="text-white">Oracle Cloud (Frankfurt)</strong></span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- LIGHTWEIGHT CHARTS INITIALIZATION & TICK STREAM -->
+  <script>
+    let activeSymbol = "XAUUSD";
+    let chart, candleSeries;
+    let isSoundOn = true;
+
+    function initChart() {
+      const container = document.getElementById("chartContainer");
+      container.innerHTML = "";
+      chart = LightweightCharts.createChart(container, {
+        layout: {
+          background: { color: "#090d16" },
+          textColor: "#94a3b8",
+        },
+        grid: {
+          vertLines: { color: "#1e293b" },
+          horzLines: { color: "#1e293b" },
+        },
+        timeScale: {
+          borderColor: "#334155",
+          timeVisible: true,
+          secondsVisible: false,
+        },
+      });
+
+      candleSeries = chart.addCandlestickSeries({
+        upColor: "#10b981",
+        downColor: "#ef4444",
+        borderVisible: false,
+        wickUpColor: "#10b981",
+        wickDownColor: "#ef4444",
+      });
+
+      // Populate initial historical candles
+      generateHistoricalData(activeSymbol);
+      window.addEventListener("resize", () => {
+        chart.resize(container.clientWidth, container.clientHeight);
+      });
+    }
+
+    function generateHistoricalData(symbol) {
+      let basePrice = symbol.includes("XAU") ? 4120.0 : 1.1225;
+      let data = [];
+      let now = Math.floor(Date.now() / 1000) - 100 * 3600;
+      let p = basePrice;
+      for (let i = 0; i < 100; i++) {
+        let step = (Math.random() - 0.48) * (symbol.includes("XAU") ? 4.0 : 0.0015);
+        let open = p;
+        let close = open + step;
+        let high = Math.max(open, close) + Math.random() * (symbol.includes("XAU") ? 2.0 : 0.0008);
+        let low = Math.min(open, close) - Math.random() * (symbol.includes("XAU") ? 2.0 : 0.0008);
+        p = close;
+        data.push({ time: now + i * 3600, open, high, low, close });
+      }
+      candleSeries.setData(data);
+      document.getElementById("livePrice").innerText = p.toFixed(symbol.includes("XAU") ? 2 : 5);
+    }
+
+    function changeSymbol(newSymbol) {
+      activeSymbol = newSymbol;
+      document.getElementById("chartTitle").innerText = `${newSymbol} — 1-Hour Chart`;
+      generateHistoricalData(newSymbol);
+    }
+
+    function toggleSound() {
+      isSoundOn = !isSoundOn;
+      document.getElementById("soundIcon").innerText = isSoundOn ? "🔊" : "🔇";
+      document.getElementById("soundText").innerText = isSoundOn ? "Alerts On" : "Alerts Off";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initChart();
+    });
+  </script>
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PropGuard MT5 — Institutional Prop Challenge & Verification Command Center</title>
-  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
   <style>
     body {
@@ -13,19 +13,24 @@
       color: #f1f5f9;
     }
     .neon-border-buy {
-      border: 1px solid rgba(16, 185, 129, 0.5);
-      box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+      border: 1px solid rgba(16, 185, 129, 0.6) !important;
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.25) !important;
     }
     .neon-border-sell {
-      border: 1px solid rgba(239, 68, 68, 0.5);
-      box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.6) !important;
+      box-shadow: 0 0 25px rgba(239, 68, 68, 0.25) !important;
     }
     .neon-border-hold {
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      box-shadow: 0 0 15px rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.4) !important;
+      box-shadow: 0 0 15px rgba(245, 158, 11, 0.1) !important;
     }
-    .neon-glow-blue {
-      box-shadow: 0 0 25px rgba(37, 99, 235, 0.15);
+    .pulse-green {
+      animation: pulseGreen 2s infinite;
+    }
+    @keyframes pulseGreen {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
     }
     ::-webkit-scrollbar {
       width: 6px;
@@ -52,15 +57,15 @@
         <div>
           <div class="flex flex-wrap items-center gap-2">
             <h1 class="text-xl sm:text-2xl font-black tracking-tight text-white">PropGuard MT5 Command Center</h1>
-            <span class="flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> 24/7 Oracle Cloud Active
+            <span id="wsStatusBadge" class="flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-amber-500/15 text-amber-400 border border-amber-500/30">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span> Connecting WebSocket...
             </span>
             <span class="flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/40">
-              <span>Account:</span> <strong class="text-white">6350807 (Deriv-Demo)</strong>
+              <span>MT5 Account:</span> <strong class="text-white">6350807 (Deriv-Demo)</strong>
             </span>
           </div>
           <p class="text-xs text-slate-400 mt-0.5">
-            Institutional Prop Challenge Engine • Strict 3.0% Daily Loss Hard Stop • 6.5% Max DD Breaker • AI Cognitive Learning Brain
+            24/7 Cloud Architecture • Strict 3.0% Daily Loss Hard Stop • 6.5% Max DD Breaker • AI Cognitive Learning Brain
           </p>
         </div>
       </div>
@@ -71,12 +76,21 @@
         <div class="flex items-center gap-1.5 bg-slate-800/90 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs">
           <label class="text-slate-400 font-semibold">Asset:</label>
           <select id="assetSelect" onchange="changeSymbol(this.value)" class="bg-transparent text-white font-bold focus:outline-none cursor-pointer">
-            <option value="XAUUSD" class="bg-slate-900">Gold (XAUUSD)</option>
-            <option value="EURUSD" class="bg-slate-900">Euro (EURUSD)</option>
-            <option value="GBPUSD" class="bg-slate-900">Pound (GBPUSD)</option>
+            <option value="frxXAUUSD" class="bg-slate-900" selected>Gold (XAUUSD)</option>
+            <option value="frxEURUSD" class="bg-slate-900">Euro (EURUSD)</option>
+            <option value="frxGBPUSD" class="bg-slate-900">Pound (GBPUSD)</option>
             <option value="R_75" class="bg-slate-900">Volatility 75 (R_75)</option>
             <option value="R_100" class="bg-slate-900">Volatility 100 (R_100)</option>
           </select>
+        </div>
+
+        <!-- Timeframe Selector -->
+        <div class="flex items-center gap-1 bg-slate-800/90 border border-slate-700 rounded-xl p-1 text-xs">
+          <button onclick="changeTimeframe('1m', 60)" class="tf-btn px-2 py-0.5 rounded font-bold transition text-slate-400 hover:text-white" data-tf="1m">1m</button>
+          <button onclick="changeTimeframe('5m', 300)" class="tf-btn px-2 py-0.5 rounded font-bold transition text-slate-400 hover:text-white" data-tf="5m">5m</button>
+          <button onclick="changeTimeframe('15m', 900)" class="tf-btn px-2 py-0.5 rounded font-bold transition text-slate-400 hover:text-white" data-tf="15m">15m</button>
+          <button onclick="changeTimeframe('1h', 3600)" class="tf-btn px-2 py-0.5 rounded font-bold transition bg-blue-600 text-white shadow" data-tf="1h">1h</button>
+          <button onclick="changeTimeframe('4h', 14400)" class="tf-btn px-2 py-0.5 rounded font-bold transition text-slate-400 hover:text-white" data-tf="4h">4h</button>
         </div>
 
         <!-- Telegram Portal Button -->
@@ -98,14 +112,16 @@
       <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
           <span>Account Equity</span>
-          <span class="text-emerald-400 font-bold">100% Capital Safe</span>
+          <span class="text-emerald-400 font-bold flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> 100% Capital Safe
+          </span>
         </div>
         <div class="mt-2 flex items-baseline gap-2">
           <span id="accountEquity" class="text-2xl font-black text-white">$10,000.00</span>
           <span class="text-xs text-slate-400">Balance: <span id="accountBalance">$10,000.00</span></span>
         </div>
         <div class="mt-3 flex items-center justify-between text-xs pt-2 border-t border-slate-800/80">
-          <span class="text-slate-400">Today PnL:</span>
+          <span class="text-slate-400">Today Realized PnL:</span>
           <span id="dailyPnL" class="font-bold text-emerald-400">+$0.00 (0.00%)</span>
         </div>
       </div>
@@ -137,7 +153,7 @@
           <span class="text-xs text-slate-400">Buffer Remaining</span>
         </div>
         <div class="mt-3 flex items-center justify-between text-xs pt-2 border-t border-slate-800/80">
-          <span class="text-slate-400">Reset Timer:</span>
+          <span class="text-slate-400">Daily Reset Timer:</span>
           <span id="dailyResetTimer" class="font-semibold text-slate-300">00:00 UTC</span>
         </div>
       </div>
@@ -153,7 +169,7 @@
           <span class="text-xs text-slate-400">Buffer to Breaker</span>
         </div>
         <div class="mt-3 flex items-center justify-between text-xs pt-2 border-t border-slate-800/80">
-          <span class="text-slate-400">Prop Firm Threshold:</span>
+          <span class="text-slate-400">Prop Firm Hard Stop:</span>
           <span class="font-bold text-rose-400">-10.0% ($1,000)</span>
         </div>
       </div>
@@ -166,15 +182,18 @@
         
         <!-- SIGNAL BADGE & TITLE -->
         <div class="space-y-2">
-          <div class="flex items-center gap-3">
+          <div class="flex flex-wrap items-center gap-3">
             <span id="signalBadge" class="px-4 py-1.5 rounded-xl font-black text-sm tracking-wider uppercase bg-amber-500/20 text-amber-400 border border-amber-500/40">
               SCANNING / HOLD
             </span>
-            <span id="signalConfidence" class="text-xs font-bold text-slate-400 bg-slate-800 px-3 py-1 rounded-lg border border-slate-700">
+            <span id="signalConfidence" class="text-xs font-bold text-slate-300 bg-slate-800 px-3 py-1 rounded-lg border border-slate-700">
               Confidence: 55.0%
             </span>
-            <span id="marketQualityBadge" class="text-xs font-bold text-slate-400 bg-slate-800 px-3 py-1 rounded-lg border border-slate-700">
+            <span id="marketQualityBadge" class="text-xs font-bold text-slate-300 bg-slate-800 px-3 py-1 rounded-lg border border-slate-700">
               Quality Score: 78 / 100
+            </span>
+            <span id="tickDeltaBadge" class="text-xs font-mono font-bold text-emerald-400 bg-slate-800 px-2 py-1 rounded-lg border border-slate-700">
+              +0.00%
             </span>
           </div>
           <p id="signalReason" class="text-sm font-medium text-slate-300 leading-relaxed">
@@ -183,24 +202,24 @@
         </div>
 
         <!-- EXECUTION METRICS -->
-        <div class="flex flex-wrap items-center gap-4 bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 text-xs">
+        <div class="flex flex-wrap items-center gap-4 bg-slate-950/70 p-3.5 rounded-xl border border-slate-800 text-xs">
           <div>
-            <span class="text-slate-400 block">Current Price</span>
-            <span id="livePrice" class="font-mono text-base font-bold text-white">4,120.45</span>
+            <span class="text-slate-400 block text-2xs uppercase tracking-wider">Live Bid/Ask</span>
+            <span id="livePrice" class="font-mono text-base font-bold text-white">Loading...</span>
           </div>
-          <div class="h-7 w-px bg-slate-800"></div>
+          <div class="h-8 w-px bg-slate-800"></div>
           <div>
-            <span class="text-slate-400 block">Stop Loss (1.5x ATR)</span>
+            <span class="text-slate-400 block text-2xs uppercase tracking-wider">Stop Loss (-1.5x ATR)</span>
             <span id="signalSL" class="font-mono text-sm font-semibold text-rose-400">--</span>
           </div>
-          <div class="h-7 w-px bg-slate-800"></div>
+          <div class="h-8 w-px bg-slate-800"></div>
           <div>
-            <span class="text-slate-400 block">Take Profit (2.5x ATR)</span>
+            <span class="text-slate-400 block text-2xs uppercase tracking-wider">Take Profit (+2.5x ATR)</span>
             <span id="signalTP" class="font-mono text-sm font-semibold text-emerald-400">--</span>
           </div>
-          <div class="h-7 w-px bg-slate-800"></div>
+          <div class="h-8 w-px bg-slate-800"></div>
           <div>
-            <span class="text-slate-400 block">Calculated Lot Size</span>
+            <span class="text-slate-400 block text-2xs uppercase tracking-wider">Prop Lot Size</span>
             <span id="signalLots" class="font-mono text-sm font-bold text-sky-400">0.05 Lots (0.50% Risk)</span>
           </div>
         </div>
@@ -213,18 +232,18 @@
       
       <!-- CANDLESTICK CHART CONTAINER (2 COLS) -->
       <div class="lg:col-span-2 bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl flex flex-col">
-        <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+        <div class="flex flex-wrap items-center justify-between pb-3 border-b border-slate-800 gap-2">
           <div class="flex items-center gap-2">
             <h2 id="chartTitle" class="text-sm font-bold text-white">Gold (XAUUSD) — 1-Hour Chart</h2>
-            <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">1h Entry / 4h Trend</span>
+            <span id="chartSubTitle" class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700">Deriv Live WebSocket</span>
           </div>
-          <div class="flex items-center gap-2 text-xs text-slate-400">
-            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> 20 EMA</span>
-            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-amber-400"></span> 50 EMA</span>
-            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-400"></span> 200 EMA</span>
+          <div class="flex items-center gap-3 text-xs text-slate-400">
+            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span> EMA 20</span>
+            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span> EMA 50</span>
+            <span id="chartCandleCount" class="text-slate-500 font-mono">Candles: 0</span>
           </div>
         </div>
-        <div id="chartContainer" class="w-full h-80 sm:h-96 mt-3 rounded-lg overflow-hidden"></div>
+        <div id="chartContainer" class="w-full h-80 sm:h-96 mt-3 rounded-lg overflow-hidden relative"></div>
       </div>
 
       <!-- CONFLUENCE RADAR & ECONOMIC NEWS FILTER (1 COL) -->
@@ -234,7 +253,9 @@
         <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl space-y-3">
           <h3 class="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center justify-between">
             <span>Institutional Rule Radar</span>
-            <span class="text-emerald-400 font-semibold">Active</span>
+            <span class="text-emerald-400 font-semibold flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Active Guard
+            </span>
           </h3>
 
           <div class="space-y-2 text-xs">
@@ -247,7 +268,7 @@
               <span id="radarPullback" class="font-bold text-amber-400">⏳ Awaiting Dip</span>
             </div>
             <div class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60 border border-slate-800">
-              <span class="text-slate-300">1.5x ATR "Room to Run" (Donchian)</span>
+              <span class="text-slate-300">1.5x ATR "Room to Run"</span>
               <span id="radarRoom" class="font-bold text-emerald-400">✅ 2.4x ATR Room</span>
             </div>
             <div class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60 border border-slate-800">
@@ -256,7 +277,7 @@
             </div>
             <div class="flex items-center justify-between p-2 rounded-lg bg-slate-800/60 border border-slate-800">
               <span class="text-slate-300">Prime Session (07:00 - 18:00 UTC)</span>
-              <span id="radarSession" class="font-bold text-slate-300">Off-Hours (Safe)</span>
+              <span id="radarSession" class="font-bold text-slate-300">Checking...</span>
             </div>
           </div>
         </div>
@@ -269,11 +290,11 @@
               ✅ CLEAR
             </span>
           </div>
-          <p class="text-xs text-slate-400">Auto-scrapes ForexFactory high-impact events. Locks entries ±5m around releases.</p>
+          <p class="text-xs text-slate-400">ForexFactory live XML feed. Shuts down entries ±5m around high-impact releases.</p>
           <div class="p-2.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs space-y-1">
             <div class="flex items-center justify-between font-semibold text-white">
               <span id="nextNewsEvent">GBP CPI y/y (High Impact)</span>
-              <span id="nextNewsTime" class="text-amber-400">In 14 hrs</span>
+              <span id="nextNewsTime" class="text-amber-400">Scheduled 10:00 UTC</span>
             </div>
             <span class="text-slate-500 block text-2xs">Currencies monitored: USD, EUR, GBP</span>
           </div>
@@ -293,7 +314,7 @@
             <span class="text-lg">🧠</span>
             <h3 class="text-sm font-bold text-white">AI Cognitive Memory Matrix</h3>
           </div>
-          <span class="text-xs text-slate-400">runtime/prop_memory.json</span>
+          <span class="text-xs text-slate-400 font-mono">runtime/prop_memory.json</span>
         </div>
         <p class="text-xs text-slate-400">
           The bot extracts Market DNA from every trade. When it wins, it boosts confidence by +10%; when it loses, it automatically vetoes that exact trap.
@@ -313,7 +334,7 @@
         </div>
 
         <div class="p-3 bg-slate-950/70 border border-slate-800 rounded-xl text-xs space-y-1">
-          <span class="text-slate-400 block font-semibold">Latest AI Forensic Autopsy:</span>
+          <span class="text-slate-400 block font-semibold">Latest AI Forensic Autopsy (Gemini 2.5 Flash):</span>
           <p id="latestAutopsyText" class="text-slate-300 italic">
             "Previous trade achieved 2.4R profit: 20-period EMA bounce confirmed by 4-hour trend agreement provided institutional momentum."
           </p>
@@ -327,10 +348,10 @@
             <span class="text-lg">📋</span>
             <h3 class="text-sm font-bold text-white">Recent Prop Executions (SQLite DB)</h3>
           </div>
-          <span class="text-xs text-slate-400">runtime/prop_trades.db</span>
+          <span class="text-xs text-slate-400 font-mono">runtime/prop_trades.db</span>
         </div>
 
-        <div class="space-y-2 overflow-y-auto max-h-48 pr-1 text-xs">
+        <div id="recentTradesList" class="space-y-2 overflow-y-auto max-h-48 pr-1 text-xs">
           <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-950/60 border border-slate-800">
             <div>
               <span class="font-bold text-emerald-400">WIN (+$45.20)</span>
@@ -355,8 +376,8 @@
         </div>
 
         <div class="flex items-center justify-between pt-2 border-t border-slate-800 text-xs">
-          <span class="text-slate-400">Bot Uptime: <strong class="text-emerald-400">82 Days 24/7</strong></span>
-          <span class="text-slate-400">Server: <strong class="text-white">Oracle Cloud (Frankfurt)</strong></span>
+          <span class="text-slate-400">Oracle Cloud Uptime: <strong class="text-emerald-400">Active (24/7)</strong></span>
+          <span class="text-slate-400">Instance: <strong class="text-white">130.61.161.158</strong></span>
         </div>
       </div>
 
@@ -364,15 +385,34 @@
 
   </div>
 
-  <!-- LIGHTWEIGHT CHARTS INITIALIZATION & TICK STREAM -->
+  <!-- LIGHTWEIGHT CHARTS INITIALIZATION & DERIV WEBSOCKET STREAM -->
   <script>
-    let activeSymbol = "XAUUSD";
-    let chart, candleSeries;
+    let activeSymbol = "frxXAUUSD";
+    let activeTf = "1h";
+    let activeGranularity = 3600;
+    let chart, candleSeries, ema20Series, ema50Series;
+    let candles = [];
     let isSoundOn = true;
+    let ws = null;
+    let wsEndpointIdx = 0;
+
+    const WS_ENDPOINTS = [
+      "wss://ws.derivws.com/websockets/v3?app_id=1089",
+      "wss://frontend.binaryws.com/websockets/v3?app_id=1089"
+    ];
+
+    const SYMBOL_NAMES = {
+      "frxXAUUSD": "Gold (XAUUSD)",
+      "frxEURUSD": "Euro (EURUSD)",
+      "frxGBPUSD": "Pound (GBPUSD)",
+      "R_75": "Volatility 75 Index",
+      "R_100": "Volatility 100 Index"
+    };
 
     function initChart() {
       const container = document.getElementById("chartContainer");
       container.innerHTML = "";
+      
       chart = LightweightCharts.createChart(container, {
         layout: {
           background: { color: "#090d16" },
@@ -387,6 +427,9 @@
           timeVisible: true,
           secondsVisible: false,
         },
+        crosshair: {
+          mode: LightweightCharts.CrosshairMode.Normal,
+        },
       });
 
       candleSeries = chart.addCandlestickSeries({
@@ -397,35 +440,318 @@
         wickDownColor: "#ef4444",
       });
 
-      // Populate initial historical candles
-      generateHistoricalData(activeSymbol);
+      ema20Series = chart.addLineSeries({
+        color: "#10b981",
+        lineWidth: 1.5,
+        title: "EMA 20"
+      });
+
+      ema50Series = chart.addLineSeries({
+        color: "#f59e0b",
+        lineWidth: 1.5,
+        title: "EMA 50"
+      });
+
       window.addEventListener("resize", () => {
         chart.resize(container.clientWidth, container.clientHeight);
       });
     }
 
-    function generateHistoricalData(symbol) {
-      let basePrice = symbol.includes("XAU") ? 4120.0 : 1.1225;
-      let data = [];
-      let now = Math.floor(Date.now() / 1000) - 100 * 3600;
-      let p = basePrice;
-      for (let i = 0; i < 100; i++) {
-        let step = (Math.random() - 0.48) * (symbol.includes("XAU") ? 4.0 : 0.0015);
-        let open = p;
-        let close = open + step;
-        let high = Math.max(open, close) + Math.random() * (symbol.includes("XAU") ? 2.0 : 0.0008);
-        let low = Math.min(open, close) - Math.random() * (symbol.includes("XAU") ? 2.0 : 0.0008);
-        p = close;
-        data.push({ time: now + i * 3600, open, high, low, close });
+    function initWebSocket() {
+      if (ws) {
+        try {
+          ws.onclose = null;
+          ws.onerror = null;
+          ws.close();
+        } catch (e) {}
       }
-      candleSeries.setData(data);
-      document.getElementById("livePrice").innerText = p.toFixed(symbol.includes("XAU") ? 2 : 5);
+
+      const activeUrl = WS_ENDPOINTS[wsEndpointIdx % WS_ENDPOINTS.length];
+      const badge = document.getElementById("wsStatusBadge");
+      badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span> Connecting...`;
+      badge.className = "flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-amber-500/15 text-amber-400 border border-amber-500/30";
+
+      try {
+        ws = new WebSocket(activeUrl);
+      } catch (err) {
+        console.warn("WebSocket creation error:", err);
+        wsEndpointIdx++;
+        setTimeout(initWebSocket, 2000);
+        return;
+      }
+
+      ws.onopen = () => {
+        badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Deriv Streaming`;
+        badge.className = "flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30";
+
+        // Subscribe to candles
+        ws.send(JSON.stringify({
+          ticks_history: activeSymbol,
+          adjust_start_time: 1,
+          count: 90,
+          end: "latest",
+          granularity: activeGranularity,
+          style: "candles",
+          subscribe: 1
+        }));
+      };
+
+      ws.onerror = (err) => {
+        console.warn("WebSocket error:", err);
+      };
+
+      ws.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        if (data.error) {
+          console.error("Deriv error:", data.error);
+          return;
+        }
+
+        // Initial candles
+        if (data.msg_type === "candles") {
+          candles = data.candles.map(c => ({
+            time: c.epoch,
+            open: parseFloat(c.open),
+            high: parseFloat(c.high),
+            low: parseFloat(c.low),
+            close: parseFloat(c.close)
+          }));
+          updateChartData();
+          processMarketScan();
+        }
+
+        // Live tick update
+        if (data.msg_type === "ohlc") {
+          const o = data.ohlc;
+          const openTime = parseInt(o.open_time);
+          if (candles.length > 0) {
+            const last = candles[candles.length - 1];
+            if (last.time === openTime) {
+              last.high = Math.max(last.high, parseFloat(o.high));
+              last.low = Math.min(last.low, parseFloat(o.low));
+              last.close = parseFloat(o.close);
+              candleSeries.update(last);
+            } else if (openTime > last.time) {
+              const newCandle = {
+                time: openTime,
+                open: parseFloat(o.open),
+                high: parseFloat(o.high),
+                low: parseFloat(o.low),
+                close: parseFloat(o.close)
+              };
+              candles.push(newCandle);
+              if (candles.length > 120) candles.shift();
+              candleSeries.update(newCandle);
+            }
+          }
+          processMarketScan();
+        }
+      };
+
+      ws.onclose = () => {
+        badge.innerHTML = `<span class="w-2 h-2 rounded-full bg-rose-400"></span> Reconnecting...`;
+        badge.className = "flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-rose-500/15 text-rose-400 border border-rose-500/30";
+        wsEndpointIdx++;
+        setTimeout(initWebSocket, 2500);
+      };
+    }
+
+    // INDICATORS & MATH
+    function computeEMA(prices, period) {
+      if (prices.length < period) return [];
+      const k = 2 / (period + 1);
+      let ema = [];
+      let sum = 0;
+      for (let i = 0; i < period; i++) sum += prices[i];
+      let prevEma = sum / period;
+      ema.push(prevEma);
+
+      for (let i = period; i < prices.length; i++) {
+        prevEma = prices[i] * k + prevEma * (1 - k);
+        ema.push(prevEma);
+      }
+      return ema;
+    }
+
+    function computeATR(candles, period = 14) {
+      if (candles.length < period) return 1.0;
+      let trs = [];
+      for (let i = 1; i < candles.length; i++) {
+        let tr = Math.max(
+          candles[i].high - candles[i].low,
+          Math.abs(candles[i].high - candles[i - 1].close),
+          Math.abs(candles[i].low - candles[i - 1].close)
+        );
+        trs.push(tr);
+      }
+      let sum = trs.slice(-period).reduce((a, b) => a + b, 0);
+      return sum / period;
+    }
+
+    function updateChartData() {
+      if (!candles.length) return;
+      candleSeries.setData(candles);
+      document.getElementById("chartCandleCount").innerText = `Candles: ${candles.length}`;
+
+      const closes = candles.map(c => c.close);
+      const ema20 = computeEMA(closes, 20);
+      const ema50 = computeEMA(closes, 50);
+
+      const ema20Data = [];
+      for (let i = 0; i < ema20.length; i++) {
+        const cIdx = candles.length - ema20.length + i;
+        if (cIdx >= 0) ema20Data.push({ time: candles[cIdx].time, value: ema20[i] });
+      }
+      ema20Series.setData(ema20Data);
+
+      const ema50Data = [];
+      for (let i = 0; i < ema50.length; i++) {
+        const cIdx = candles.length - ema50.length + i;
+        if (cIdx >= 0) ema50Data.push({ time: candles[cIdx].time, value: ema50[i] });
+      }
+      ema50Series.setData(ema50Data);
+    }
+
+    function processMarketScan() {
+      if (candles.length < 30) return;
+
+      const last = candles[candles.length - 1];
+      const prev = candles[candles.length - 2];
+      const currClose = last.close;
+      const isGold = activeSymbol.includes("XAU");
+      const isForex = activeSymbol.includes("frx") && !isGold;
+      const decimals = isGold ? 2 : (isForex ? 5 : 2);
+
+      // Update Live Price
+      document.getElementById("livePrice").innerText = currClose.toFixed(decimals);
+
+      // Delta
+      const delta = ((currClose - prev.close) / prev.close) * 100;
+      const deltaBadge = document.getElementById("tickDeltaBadge");
+      deltaBadge.innerText = (delta >= 0 ? "+" : "") + delta.toFixed(2) + "%";
+      deltaBadge.className = delta >= 0 ? "text-xs font-mono font-bold text-emerald-400 bg-slate-800 px-2 py-1 rounded-lg border border-slate-700" : "text-xs font-mono font-bold text-rose-400 bg-slate-800 px-2 py-1 rounded-lg border border-slate-700";
+
+      // Confluence Checks
+      const closes = candles.map(c => c.close);
+      const ema20Arr = computeEMA(closes, 20);
+      const ema50Arr = computeEMA(closes, 50);
+      const ema20 = ema20Arr[ema20Arr.length - 1] || currClose;
+      const ema50 = ema50Arr[ema50Arr.length - 1] || currClose;
+      const atr = computeATR(candles, 14);
+
+      // 1. Trend alignment
+      const isBull = ema20 > ema50;
+      const isBear = ema20 < ema50;
+      const radarTrend = document.getElementById("radarTrend");
+      radarTrend.innerText = isBull ? "✅ BULLISH" : (isBear ? "🔻 BEARISH" : "⏳ FLAT");
+      radarTrend.className = isBull ? "font-bold text-emerald-400" : (isBear ? "font-bold text-rose-400" : "font-bold text-amber-400");
+
+      // 2. 20 EMA Pullback
+      const distToEma20 = Math.abs(currClose - ema20) / atr;
+      const radarPullback = document.getElementById("radarPullback");
+      const inPullbackZone = distToEma20 <= 0.65;
+      if (inPullbackZone) {
+        radarPullback.innerText = `✅ In Value Zone (${distToEma20.toFixed(1)}x ATR)`;
+        radarPullback.className = "font-bold text-emerald-400";
+      } else {
+        radarPullback.innerText = `⏳ Extended (${distToEma20.toFixed(1)}x ATR to EMA)`;
+        radarPullback.className = "font-bold text-amber-400";
+      }
+
+      // 3. Room to run (Donchian barrier)
+      const highs20 = candles.slice(-20).map(c => c.high);
+      const lows20 = candles.slice(-20).map(c => c.low);
+      const donchianHigh = Math.max(...highs20);
+      const donchianLow = Math.min(...lows20);
+      const roomUp = (donchianHigh - currClose) / atr;
+      const roomDown = (currClose - donchianLow) / atr;
+      const radarRoom = document.getElementById("radarRoom");
+      const roomToRun = isBull ? roomUp : roomDown;
+      if (roomToRun >= 1.5) {
+        radarRoom.innerText = `✅ ${roomToRun.toFixed(1)}x ATR Room`;
+        radarRoom.className = "font-bold text-emerald-400";
+      } else {
+        radarRoom.innerText = `⚠️ Barrier Blocked (${roomToRun.toFixed(1)}x ATR)`;
+        radarRoom.className = "font-bold text-amber-400";
+      }
+
+      // 4. Session Check (07:00 - 18:00 UTC)
+      const nowUtcHours = new Date().getUTCHours();
+      const isPrime = nowUtcHours >= 7 && nowUtcHours < 18;
+      const radarSession = document.getElementById("radarSession");
+      if (isPrime) {
+        radarSession.innerText = `✅ Prime Session (${nowUtcHours.toString().padStart(2, '0')}:00 UTC)`;
+        radarSession.className = "font-bold text-emerald-400";
+      } else {
+        radarSession.innerText = `🌙 Off-Hours (${nowUtcHours.toString().padStart(2, '0')}:00 UTC)`;
+        radarSession.className = "font-bold text-slate-400";
+      }
+
+      // Overall Signal Decision
+      const banner = document.getElementById("signalBanner");
+      const badge = document.getElementById("signalBadge");
+      const confBadge = document.getElementById("signalConfidence");
+      const reasonEl = document.getElementById("signalReason");
+      const slEl = document.getElementById("signalSL");
+      const tpEl = document.getElementById("signalTP");
+      const lotsEl = document.getElementById("signalLots");
+
+      if (isBull && inPullbackZone && roomToRun >= 1.5 && isPrime) {
+        banner.className = "bg-slate-900 border border-emerald-500/50 rounded-2xl p-5 shadow-2xl transition-all duration-300 neon-border-buy";
+        badge.innerText = "BUY ENTRY READY";
+        badge.className = "px-4 py-1.5 rounded-xl font-black text-sm tracking-wider uppercase bg-emerald-500/20 text-emerald-400 border border-emerald-500/50 pulse-green";
+        confBadge.innerText = "Confidence: 85.0% (A+ Synergy)";
+        reasonEl.innerText = `Bullish Confluence: 20 EMA pullback confirmed, ${roomToRun.toFixed(1)}x ATR clearance to resistance.`;
+        slEl.innerText = (currClose - 1.5 * atr).toFixed(decimals);
+        tpEl.innerText = (currClose + 2.5 * atr).toFixed(decimals);
+        lotsEl.innerText = isGold ? "0.05 Lots (0.50% Risk)" : "0.10 Lots (0.50% Risk)";
+        playAlertSound();
+      } else if (isBear && inPullbackZone && roomToRun >= 1.5 && isPrime) {
+        banner.className = "bg-slate-900 border border-rose-500/50 rounded-2xl p-5 shadow-2xl transition-all duration-300 neon-border-sell";
+        badge.innerText = "SELL ENTRY READY";
+        badge.className = "px-4 py-1.5 rounded-xl font-black text-sm tracking-wider uppercase bg-rose-500/20 text-rose-400 border border-rose-500/50";
+        confBadge.innerText = "Confidence: 82.5% (A+ Synergy)";
+        reasonEl.innerText = `Bearish Confluence: 20 EMA rally retest rejected, ${roomToRun.toFixed(1)}x ATR clearance to support.`;
+        slEl.innerText = (currClose + 1.5 * atr).toFixed(decimals);
+        tpEl.innerText = (currClose - 2.5 * atr).toFixed(decimals);
+        lotsEl.innerText = isGold ? "0.05 Lots (0.50% Risk)" : "0.10 Lots (0.50% Risk)";
+        playAlertSound();
+      } else {
+        banner.className = "bg-slate-900 border border-slate-800 rounded-2xl p-5 shadow-2xl transition-all duration-300 neon-border-hold";
+        badge.innerText = "SCANNING / HOLD";
+        badge.className = "px-4 py-1.5 rounded-xl font-black text-sm tracking-wider uppercase bg-amber-500/20 text-amber-400 border border-amber-500/40";
+        confBadge.innerText = "Confidence: 55.0%";
+        
+        let reasons = [];
+        if (!isPrime) reasons.push("Outside London/NY session");
+        if (!inPullbackZone) reasons.push("Awaiting 20 EMA value retest");
+        if (roomToRun < 1.5) reasons.push("Room-to-run floor/ceiling blocked");
+        reasonEl.innerText = `Confluence Scan: ${reasons.join(" • ") || "Awaiting institutional alignment"}`;
+        slEl.innerText = "--";
+        tpEl.innerText = "--";
+      }
     }
 
     function changeSymbol(newSymbol) {
       activeSymbol = newSymbol;
-      document.getElementById("chartTitle").innerText = `${newSymbol} — 1-Hour Chart`;
-      generateHistoricalData(newSymbol);
+      document.getElementById("chartTitle").innerText = `${SYMBOL_NAMES[newSymbol] || newSymbol} — ${activeTf.toUpperCase()} Chart`;
+      candles = [];
+      initWebSocket();
+    }
+
+    function changeTimeframe(tf, gran) {
+      activeTf = tf;
+      activeGranularity = gran;
+      document.querySelectorAll(".tf-btn").forEach(btn => {
+        if (btn.dataset.tf === tf) {
+          btn.className = "tf-btn px-2 py-0.5 rounded font-bold transition bg-blue-600 text-white shadow";
+        } else {
+          btn.className = "tf-btn px-2 py-0.5 rounded font-bold transition text-slate-400 hover:text-white";
+        }
+      });
+      document.getElementById("chartTitle").innerText = `${SYMBOL_NAMES[activeSymbol] || activeSymbol} — ${tf.toUpperCase()} Chart`;
+      candles = [];
+      initWebSocket();
     }
 
     function toggleSound() {
@@ -434,8 +760,26 @@
       document.getElementById("soundText").innerText = isSoundOn ? "Alerts On" : "Alerts Off";
     }
 
+    function playAlertSound() {
+      if (!isSoundOn) return;
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.setValueAtTime(587.33, ctx.currentTime); // D5
+        osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.15); // A5
+        gain.gain.setValueAtTime(0.1, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.25);
+      } catch (e) {}
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       initChart();
+      initWebSocket();
     });
   </script>
 </body>

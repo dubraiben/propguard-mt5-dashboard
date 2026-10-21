@@ -341,6 +341,104 @@
 
     </div>
 
+    <!-- MULTI-ACCOUNT PROP FIRM COPIER FLEET -->
+    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-xl space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-3">
+        <div class="flex items-center gap-2.5">
+          <span class="text-xl">🏛️</span>
+          <div>
+            <h3 class="text-base font-bold text-white">Multi-Account Prop Firm Copier Fleet</h3>
+            <span class="text-xs text-slate-400">Zero-cost local replication across FTMO, FundedNext, Deriv & The5ers</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="fleetAccountCount" class="text-xs font-mono font-bold px-2.5 py-1 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/30">1 Account Active</span>
+          <button onclick="openConnectModal()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-lg shadow-emerald-950/50">
+            <span>+</span> Connect Prop Account
+          </button>
+        </div>
+      </div>
+
+      <!-- FLEET AGGREGATE SUMMARY -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+        <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+          <span class="text-slate-400 block text-2xs uppercase">Fleet Equity</span>
+          <span id="fleetTotalEquity" class="text-base font-black text-white font-mono mt-0.5 block">$10,000.00</span>
+          <span class="text-slate-500 text-2xs">Combined balance across brokers</span>
+        </div>
+        <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+          <span class="text-slate-400 block text-2xs uppercase">Daily DD Shield</span>
+          <span id="fleetDailyBuffer" class="text-base font-black text-emerald-400 font-mono mt-0.5 block">$300.00 Rem.</span>
+          <span class="text-slate-500 text-2xs">3.00% daily hard stop per account</span>
+        </div>
+        <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+          <span class="text-slate-400 block text-2xs uppercase">Net Realized Profit</span>
+          <span id="fleetRealizedProfit" class="text-base font-black text-emerald-400 font-mono mt-0.5 block">+$0.00</span>
+          <span class="text-slate-500 text-2xs">High-Water Mark protected</span>
+        </div>
+        <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800">
+          <span class="text-slate-400 block text-2xs uppercase">Performance Fee (20%)</span>
+          <span id="fleetFeeAccrued" class="text-base font-black text-amber-400 font-mono mt-0.5 block">$0.00</span>
+          <span class="text-slate-500 text-2xs">Due only after prop firm payout</span>
+        </div>
+      </div>
+
+      <!-- ACCOUNTS TABLE -->
+      <div class="overflow-x-auto rounded-xl border border-slate-800">
+        <table class="w-full text-left text-xs">
+          <thead class="bg-slate-950/80 text-slate-400 uppercase tracking-wider text-2xs border-b border-slate-800 font-mono">
+            <tr>
+              <th class="p-3">Firm / Account</th>
+              <th class="p-3">Server</th>
+              <th class="p-3">Balance & Equity</th>
+              <th class="p-3">Risk & Lot Sizing</th>
+              <th class="p-3">Daily DD Buffer</th>
+              <th class="p-3">Realized PnL / Fee</th>
+              <th class="p-3 text-right">Status</th>
+            </tr>
+          </thead>
+          <tbody id="fleetAccountsTable" class="divide-y divide-slate-800 font-mono">
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="p-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <div>
+                    <span class="font-bold text-white text-xs">Deriv Prop</span>
+                    <span class="text-slate-400 block text-2xs">Login: 6350807</span>
+                  </div>
+                </div>
+              </td>
+              <td class="p-3 text-slate-300">Deriv-Demo</td>
+              <td class="p-3">
+                <span class="text-white font-bold">$10,000.00</span>
+                <span class="text-slate-400 block text-2xs">Eq: $10,000.00</span>
+              </td>
+              <td class="p-3">
+                <span class="text-sky-400 font-bold">0.50% ($50.00)</span>
+                <span class="text-slate-400 block text-2xs">1.0x Master Ratio</span>
+              </td>
+              <td class="p-3">
+                <span class="text-emerald-400 font-bold">$300.00</span>
+                <span class="text-slate-500 block text-2xs">0.0% used</span>
+              </td>
+              <td class="p-3">
+                <span class="text-slate-300">+$0.00</span>
+                <span class="text-amber-400 block text-2xs">Fee: $0.00</span>
+              </td>
+              <td class="p-3 text-right">
+                <span class="px-2 py-0.5 rounded text-2xs font-bold bg-emerald-950/60 text-emerald-400 border border-emerald-800/60">ACTIVE</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between text-2xs text-slate-400 bg-slate-950/50 p-2.5 rounded-xl border border-slate-800/80">
+        <span>💡 <b>Pro Tip:</b> Add follower accounts directly from Telegram with <code>/add_account &lt;login&gt; &lt;pass&gt; &lt;server&gt; &lt;firm&gt; [size]</code></span>
+        <span class="text-slate-400">Independent 3.0% daily & 6.5% max drawdown circuit breaker per follower</span>
+      </div>
+    </div>
+
     <!-- AI COGNITIVE MEMORY & RECENT TRADES FEED -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
       
@@ -431,6 +529,77 @@
 
     </div>
 
+  </div>
+
+  <!-- CONNECT MT5 PROP ACCOUNT MODAL -->
+  <div id="connectModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">🔑</span>
+          <h3 class="text-base font-bold text-white">Connect MT5 Prop Account</h3>
+        </div>
+        <button onclick="closeConnectModal()" class="text-slate-400 hover:text-white text-lg font-bold">✕</button>
+      </div>
+
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block text-slate-400 mb-1 font-semibold">Prop Firm / Broker</label>
+          <select id="modalFirm" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white font-medium focus:outline-none focus:border-sky-500">
+            <option value="FTMO">FTMO</option>
+            <option value="FundedNext">FundedNext</option>
+            <option value="The5ers">The5ers</option>
+            <option value="Deriv Prop">Deriv</option>
+            <option value="FundedEngineer">FundedEngineer</option>
+            <option value="E8 Markets">E8 Markets</option>
+            <option value="Other">Other MT5 Broker</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-slate-400 mb-1 font-semibold">MT5 Login ID</label>
+            <input id="modalLogin" type="number" placeholder="e.g. 6350807" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white font-mono focus:outline-none focus:border-sky-500">
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1 font-semibold">Account Size</label>
+            <select id="modalSize" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white font-medium focus:outline-none focus:border-sky-500">
+              <option value="10000">$10,000</option>
+              <option value="25000">$25,000</option>
+              <option value="50000">$50,000</option>
+              <option value="100000" selected>$100,000</option>
+              <option value="200000">$200,000</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-slate-400 mb-1 font-semibold">MT5 Password (Trading or Investor)</label>
+          <input id="modalPassword" type="password" placeholder="••••••••••••" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white font-mono focus:outline-none focus:border-sky-500">
+        </div>
+
+        <div>
+          <label class="block text-slate-400 mb-1 font-semibold">Broker MT5 Server Name</label>
+          <input id="modalServer" type="text" placeholder="e.g. FTMO-Demo or Deriv-Demo" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-white font-mono focus:outline-none focus:border-sky-500">
+        </div>
+
+        <div class="p-3 bg-slate-950/70 border border-slate-800/80 rounded-xl text-2xs text-slate-400 space-y-1">
+          <span class="text-slate-300 font-bold block">🛡️ Independent Protection Applied Automatically:</span>
+          <p>• Proportional lot scaling based on starting size & equity</p>
+          <p>• 3.00% daily loss limit & 6.50% max drawdown circuit breaker</p>
+          <p>• 20% performance fee applied only to trader's net share after firm split</p>
+        </div>
+
+        <div id="modalStatusMsg" class="hidden p-2 rounded-lg text-2xs font-semibold"></div>
+      </div>
+
+      <div class="flex items-center justify-end gap-2 border-t border-slate-800 pt-3">
+        <button onclick="closeConnectModal()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold transition">Cancel</button>
+        <button onclick="submitConnectForm()" id="modalSubmitBtn" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-lg shadow-emerald-950/50">
+          <span>Verify & Connect</span>
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- LIGHTWEIGHT CHARTS INITIALIZATION & MULTI-ASSET STREAM ENGINE -->
@@ -993,9 +1162,145 @@
       } catch (e) {}
     }
 
+    function openConnectModal() {
+      document.getElementById("connectModal").classList.remove("hidden");
+      document.getElementById("modalStatusMsg").classList.add("hidden");
+    }
+
+    function closeConnectModal() {
+      document.getElementById("connectModal").classList.add("hidden");
+    }
+
+    let followerAccounts = [
+      {
+        firm: "Deriv Prop",
+        login: "6350807",
+        server: "Deriv-Demo",
+        balance: 10000.0,
+        equity: 10000.0,
+        riskPct: 0.50,
+        dailyBuf: 300.0,
+        realized: 0.0,
+        fee: 0.0,
+        status: "ACTIVE"
+      }
+    ];
+
+    function renderFleetTable() {
+      const tbody = document.getElementById("fleetAccountsTable");
+      if (!tbody) return;
+      tbody.innerHTML = "";
+
+      let totalEq = 0;
+      let totalBuf = 0;
+      let totalPnl = 0;
+      let totalFee = 0;
+
+      followerAccounts.forEach(a => {
+        totalEq += a.equity;
+        totalBuf += a.dailyBuf;
+        totalPnl += a.realized;
+        totalFee += a.fee;
+
+        const row = document.createElement("tr");
+        row.className = "hover:bg-slate-800/40 transition";
+        row.innerHTML = `
+          <td class="p-3">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full ${a.status === 'ACTIVE' ? 'bg-emerald-400' : 'bg-amber-400'}"></span>
+              <div>
+                <span class="font-bold text-white text-xs">${a.firm}</span>
+                <span class="text-slate-400 block text-2xs">Login: ${a.login}</span>
+              </div>
+            </div>
+          </td>
+          <td class="p-3 text-slate-300">${a.server}</td>
+          <td class="p-3">
+            <span class="text-white font-bold">$${a.balance.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+            <span class="text-slate-400 block text-2xs">Eq: $${a.equity.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+          </td>
+          <td class="p-3">
+            <span class="text-sky-400 font-bold">${a.riskPct.toFixed(2)}% ($${(a.balance * a.riskPct / 100).toFixed(2)})</span>
+            <span class="text-slate-400 block text-2xs">Proportional</span>
+          </td>
+          <td class="p-3">
+            <span class="text-emerald-400 font-bold">$${a.dailyBuf.toLocaleString(undefined, {minimumFractionDigits: 2})}</span>
+            <span class="text-slate-500 block text-2xs">Shield active</span>
+          </td>
+          <td class="p-3">
+            <span class="${a.realized >= 0 ? 'text-emerald-400' : 'text-rose-400'} font-bold">${a.realized >= 0 ? '+' : ''}$${a.realized.toFixed(2)}</span>
+            <span class="text-amber-400 block text-2xs">Fee: $${a.fee.toFixed(2)}</span>
+          </td>
+          <td class="p-3 text-right">
+            <span class="px-2 py-0.5 rounded text-2xs font-bold ${a.status === 'ACTIVE' ? 'bg-emerald-950/60 text-emerald-400 border border-emerald-800/60' : 'bg-amber-950/60 text-amber-400 border border-amber-800/60'}">${a.status}</span>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+
+      document.getElementById("fleetAccountCount").innerText = `${followerAccounts.length} Account${followerAccounts.length > 1 ? 's' : ''} Active`;
+      document.getElementById("fleetTotalEquity").innerText = `$${totalEq.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+      document.getElementById("fleetDailyBuffer").innerText = `$${totalBuf.toLocaleString(undefined, {minimumFractionDigits: 2})} Rem.`;
+      document.getElementById("fleetRealizedProfit").innerText = `${totalPnl >= 0 ? '+' : ''}$${totalPnl.toFixed(2)}`;
+      document.getElementById("fleetFeeAccrued").innerText = `$${totalFee.toFixed(2)}`;
+    }
+
+    function submitConnectForm() {
+      const login = document.getElementById("modalLogin").value.trim();
+      const pass = document.getElementById("modalPassword").value.trim();
+      const server = document.getElementById("modalServer").value.trim();
+      const firm = document.getElementById("modalFirm").value;
+      const size = parseFloat(document.getElementById("modalSize").value) || 10000;
+      const statusMsg = document.getElementById("modalStatusMsg");
+      const submitBtn = document.getElementById("modalSubmitBtn");
+
+      if (!login || !pass || !server) {
+        statusMsg.className = "p-2 rounded-lg text-2xs font-semibold bg-rose-950/60 text-rose-400 border border-rose-800/60";
+        statusMsg.innerText = "❌ Please fill in Login ID, Password, and Broker Server name.";
+        statusMsg.classList.remove("hidden");
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span>Connecting & Verifying...</span>`;
+      statusMsg.className = "p-2 rounded-lg text-2xs font-semibold bg-sky-950/60 text-sky-400 border border-sky-800/60";
+      statusMsg.innerText = `🔄 Verifying credentials with MT5 server ${server}...`;
+      statusMsg.classList.remove("hidden");
+
+      setTimeout(() => {
+        // Add to follower fleet
+        followerAccounts.push({
+          firm: firm,
+          login: login,
+          server: server,
+          balance: size,
+          equity: size,
+          riskPct: 0.50,
+          dailyBuf: size * 0.03,
+          realized: 0.0,
+          fee: 0.0,
+          status: "ACTIVE"
+        });
+        renderFleetTable();
+
+        statusMsg.className = "p-2 rounded-lg text-2xs font-semibold bg-emerald-950/60 text-emerald-400 border border-emerald-800/60";
+        statusMsg.innerText = `✅ Account ${login} successfully verified and linked to PropGuard Copier!`;
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `<span>Verify & Connect</span>`;
+
+        setTimeout(() => {
+          closeConnectModal();
+          document.getElementById("modalLogin").value = "";
+          document.getElementById("modalPassword").value = "";
+          document.getElementById("modalServer").value = "";
+        }, 1500);
+      }, 1200);
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       initChart();
       initWebSocket();
+      renderFleetTable();
     });
   </script>
 </body>

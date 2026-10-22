@@ -50,7 +50,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 74.78121276251193,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 2.4x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 2.1x ATR)"
     },
     "USDJPY": {
       "action": "HOLD",
@@ -62,31 +62,31 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 83.12594374234595,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.4x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.2x ATR)"
     },
     "USDCAD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 71.60389766523946,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.4x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.2x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 90.09135486232465,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.6x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.3x ATR)"
     },
     "NZDUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 90.72942493693353,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.7x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.4x ATR)"
     },
     "XAUUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 92.23404255319106,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.5x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.6x ATR)"
     },
     "US30": {
       "action": "HOLD",
@@ -110,7 +110,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 69.25710420454274,
-      "reason": "No clean alignment: Oversold exhaustion (RSI 29.9 < 30)"
+      "reason": "No clean alignment: Oversold exhaustion (RSI 29.9 < 30) | Room to low blocked (0.9x < 1.0x ATR)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T11:51:30.263500+00:00"
+  "updated_at": "2026-10-22T11:54:41.730540+00:00"
 }

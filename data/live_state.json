@@ -44,7 +44,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 80.87722575179261,
-      "reason": "No clean alignment: Room to low blocked (0.7x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.5x < 1.0x ATR)"
     },
     "GBPUSD": {
       "action": "HOLD",
@@ -56,7 +56,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 82.47758844720666,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.5x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.7x ATR)"
     },
     "AUDUSD": {
       "action": "HOLD",
@@ -86,7 +86,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 80.28735632184045,
-      "reason": "No clean alignment: trend_gap=0.26%, atr_pct=0.25%, rsi=46.2, body=0.01"
+      "reason": "No clean alignment: Room to low blocked (0.9x < 1.0x ATR)"
     },
     "US30": {
       "action": "HOLD",
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T13:33:17.336364+00:00"
+  "updated_at": "2026-10-22T13:36:21.844624+00:00"
 }

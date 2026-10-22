@@ -44,7 +44,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 81.86514435441916,
-      "reason": "No clean alignment: Room to low blocked (0.7x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.8x < 1.0x ATR)"
     },
     "GBPUSD": {
       "action": "HOLD",
@@ -56,7 +56,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 72.29871946384324,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.1x ATR)"
+      "reason": "No clean alignment: trend_gap=0.13%, atr_pct=0.09%, rsi=57.6, body=0.38"
     },
     "AUDUSD": {
       "action": "HOLD",
@@ -68,7 +68,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 66.60300275627864,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.1x ATR)"
+      "reason": "No clean alignment: trend_gap=0.01%, atr_pct=0.05%, rsi=57.6, body=0.82"
     },
     "USDCHF": {
       "action": "HOLD",
@@ -83,10 +83,10 @@
       "reason": "No clean alignment: trend_gap=0.10%, atr_pct=0.08%, rsi=38.2, body=0.69"
     },
     "XAUUSD": {
-      "action": "SELL",
-      "confidence": 98.0,
+      "action": "HOLD",
+      "confidence": 55,
       "market_quality": 100.0,
-      "reason": "15m trend agrees with 1h downtrend (Room: -0.1x ATR, ADX: 31.8)"
+      "reason": "No clean alignment: Room to low blocked (0.6x < 1.0x ATR)"
     },
     "US30": {
       "action": "HOLD",
@@ -104,13 +104,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 77.41992159747579,
-      "reason": "No clean alignment: Room to low blocked (0.8x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.7x < 1.0x ATR)"
     },
     "BTCUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 84.49450281530342,
-      "reason": "No clean alignment: Room to low blocked (0.2x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (-0.5x < 1.0x ATR)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T13:46:06.636671+00:00"
+  "updated_at": "2026-10-22T13:49:10.698971+00:00"
 }

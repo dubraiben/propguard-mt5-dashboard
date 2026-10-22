@@ -56,19 +56,19 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 85.22705283122247,
-      "reason": "No clean alignment: Room to low blocked (0.7x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.5x < 1.0x ATR)"
     },
     "AUDUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 75.31511651808925,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.4x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 2.5x ATR)"
     },
     "USDCAD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 77.55168970703187,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.4x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.8x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
@@ -80,13 +80,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 81.82908320618911,
-      "reason": "No clean alignment: Overextended from 20 EMA (2.2x ATR > 2.0x) | Awaiting 20 EMA pullback or breakout (dist 2.4x ATR)"
+      "reason": "No clean alignment: Overextended from 20 EMA (2.2x ATR > 2.0x)"
     },
     "XAUUSD": {
       "action": "SELL",
       "confidence": 98.0,
       "market_quality": 99.87767584097917,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.4x ATR, ADX: 38.0)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.0x ATR, ADX: 38.0)"
     },
     "US30": {
       "action": "HOLD",
@@ -211,5 +211,5 @@
     "win_rate": 100.0,
     "total_trades": 5
   },
-  "updated_at": "2026-10-22T11:00:40.582149+00:00"
+  "updated_at": "2026-10-22T11:03:46.730022+00:00"
 }

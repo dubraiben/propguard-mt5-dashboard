@@ -62,7 +62,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 65.83118578648342,
-      "reason": "No clean alignment: Oversold exhaustion (RSI 28.3 < 30) | Overextended from 20 EMA (3.4x ATR > 2.0x) | Awaiting 20 EMA pullback or breakout (dist 1.5x ATR)"
+      "reason": "No clean alignment: Oversold exhaustion (RSI 28.3 < 30) | Overextended from 20 EMA (3.4x ATR > 2.0x) | Awaiting 20 EMA pullback or breakout (dist 1.4x ATR)"
     },
     "USDCAD": {
       "action": "HOLD",
@@ -74,7 +74,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 78.7778413158848,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.5x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.8x ATR)"
     },
     "NZDUSD": {
       "action": "HOLD",
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T11:42:07.949180+00:00"
+  "updated_at": "2026-10-22T11:45:13.885215+00:00"
 }

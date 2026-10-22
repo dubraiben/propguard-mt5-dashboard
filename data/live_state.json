@@ -39,7 +39,80 @@
       "status": "ACTIVE"
     }
   ],
-  "signals": {},
+  "signals": {
+    "EURUSD": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 51.99082787294633,
+      "reason": "Market quality below threshold: trend_gap=0.02%, atr_pct=0.07%, rsi=36.8, body=0.08"
+    },
+    "GBPUSD": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 59.244816338396646,
+      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.06%, rsi=35.7, body=0.42"
+    },
+    "USDJPY": {
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 82.99622547610274,
+      "reason": "No clean alignment: Room to low blocked (0.8x < 1.0x ATR)"
+    },
+    "AUDUSD": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 54.041603774032126,
+      "reason": "Market quality below threshold: trend_gap=0.03%, atr_pct=0.07%, rsi=47.5, body=0.00"
+    },
+    "USDCAD": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 64.33332745038965,
+      "reason": "Market quality below threshold: trend_gap=0.05%, atr_pct=0.04%, rsi=52.7, body=0.17"
+    },
+    "USDCHF": {
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 85.46875000000135,
+      "reason": "No clean alignment: trend_gap=0.14%, atr_pct=0.11%, rsi=45.6, body=0.22"
+    },
+    "NZDUSD": {
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 68.79701075582194,
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.9x ATR)"
+    },
+    "XAUUSD": {
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 81.94550063371301,
+      "reason": "No clean alignment: trend_gap=0.24%, atr_pct=0.20%, rsi=48.4, body=0.48"
+    },
+    "US30": {
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 66.85538734110287,
+      "reason": "No clean alignment: Outside prime trading session"
+    },
+    "GER40": {
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 86.67345860311151,
+      "reason": "No clean alignment: trend_gap=0.23%, atr_pct=0.20%, rsi=50.2, body=0.90"
+    },
+    "NAS100": {
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 89.7211155378486,
+      "reason": "No clean alignment: Outside prime trading session"
+    },
+    "BTCUSD": {
+      "action": "SELL",
+      "confidence": 88.9,
+      "market_quality": 83.91166626822897,
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.4x ATR, ADX: 64.1)"
+    }
+  },
   "recent_trades": [
     {
       "ticket": 5812695654,
@@ -138,5 +211,5 @@
     "win_rate": 100.0,
     "total_trades": 5
   },
-  "updated_at": "2026-10-22T10:34:30.628495+00:00"
+  "updated_at": "2026-10-22T10:38:05.999193+00:00"
 }

@@ -50,7 +50,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 65.0383178822419,
-      "reason": "No clean alignment: Upper rejection wick too large (53% > 35%) | Awaiting 20 EMA pullback or breakout (dist 1.1x ATR)"
+      "reason": "No clean alignment: Upper rejection wick too large (53% > 35%) | Awaiting 20 EMA pullback or breakout (dist 1.4x ATR)"
     },
     "USDJPY": {
       "action": "HOLD",
@@ -74,13 +74,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 70.94757874454878,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 0.9x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.4x ATR)"
     },
     "NZDUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 79.9279302131231,
-      "reason": "No clean alignment: Upper rejection wick too large (56% > 35%)"
+      "reason": "No clean alignment: Upper rejection wick too large (56% > 35%) | Awaiting 20 EMA pullback or breakout (dist 1.0x ATR)"
     },
     "XAUUSD": {
       "action": "HOLD",
@@ -98,7 +98,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 68.15813950863726,
-      "reason": "No clean alignment: Upper rejection wick too large (57% > 35%) | Room to high blocked (0.7x < 1.0x ATR)"
+      "reason": "No clean alignment: Upper rejection wick too large (57% > 35%) | Room to high blocked (0.3x < 1.0x ATR)"
     },
     "NAS100": {
       "action": "HOLD",
@@ -110,7 +110,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 76.8031145650302,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.8x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.3x ATR)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T12:16:30.923195+00:00"
+  "updated_at": "2026-10-22T12:19:36.411269+00:00"
 }

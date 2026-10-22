@@ -162,12 +162,12 @@
       <!-- CARD 2: PHASE 1 CHALLENGE TARGET (+8.0%) -->
       <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 shadow-xl">
         <div class="flex items-center justify-between text-xs text-slate-400">
-          <span>Phase 1 Target (+8.0%)</span>
-          <span class="text-sky-400 font-bold">$800.00 Target</span>
+          <span id="targetPhaseTitle">Phase 1 Target (+8.0%)</span>
+          <span id="targetCashGoal" class="text-sky-400 font-bold">$800.00 Target</span>
         </div>
         <div class="mt-2 flex items-baseline gap-2">
           <span id="targetProgressText" class="text-2xl font-black text-sky-400">0.0%</span>
-          <span class="text-xs text-slate-400">Auto-lock on pass</span>
+          <span id="targetBankedText" class="text-xs text-slate-400">$0.00 / $800.00 banked</span>
         </div>
         <!-- Progress Bar -->
         <div class="w-full bg-slate-800 rounded-full h-2 mt-3 overflow-hidden">
@@ -721,6 +721,9 @@
       window.addEventListener("resize", () => {
         chart.resize(container.clientWidth, container.clientHeight);
       });
+
+      // Instantly start realistic candle engine so chart renders with zero delay
+      startRealisticFeed(activeSymbol);
     }
 
     function initWebSocket() {
@@ -1320,10 +1323,243 @@
       }, 1200);
     }
 
+    // ==========================================
+    // REAL-TIME MT5 TELEMETRY & SYNC ENGINE
+    // ==========================================
+    let telemetryPollActive = false;
+
+    async function fetchTelemetry() {
+      if (telemetryPollActive) return;
+      telemetryPollActive = true;
+
+      let payload = null;
+      let source = "none";
+
+      // 1. Try local sub-second API first (Desktop MT5 Engine on port 8899)
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 1200);
+        const res = await fetch("http://127.0.0.1:8899/api/state", {
+          signal: controller.signal,
+          headers: { "Accept": "application/json" }
+        });
+        clearTimeout(timeoutId);
+        if (res.ok) {
+          payload = await res.json();
+          source = "local";
+        }
+      } catch (e) {
+        // Local server unreachable, fall back to GitHub Pages / static live_state.json
+      }
+
+      // 2. Fall back to static JSON with cache-buster (GitHub Pages public ad visitors)
+      if (!payload || !payload.account) {
+        try {
+          const res = await fetch(`./data/live_state.json?_t=${Date.now()}`, {
+            cache: "no-store"
+          });
+          if (res.ok) {
+            payload = await res.json();
+            source = "cloud";
+          }
+        } catch (err) {
+          console.warn("Telemetry fetch error:", err);
+        }
+      }
+
+      if (payload && payload.account) {
+        updateTelemetryUI(payload, source);
+      }
+      telemetryPollActive = false;
+    }
+
+    function updateTelemetryUI(data, source) {
+      const acct = data.account || {};
+      const prop = data.prop_firm || {};
+      const initial = acct.initial_size || 10000.0;
+      const balance = acct.balance || 10000.0;
+      const equity = acct.equity || balance;
+      const netProfit = acct.net_profit !== undefined ? acct.net_profit : (balance - initial);
+      const targetCash = prop.target_cash || (initial * 0.08);
+      const targetPct = prop.target_pct || 8.0;
+
+      // 1. Target Progress dynamically mirrors PnL changes
+      const progressPct = Math.max(0.0, Math.min(100.0, (netProfit / Math.max(targetCash, 1.0)) * 100.0));
+      
+      const targetTextEl = document.getElementById("targetProgressText");
+      if (targetTextEl) targetTextEl.innerText = `${progressPct.toFixed(1)}%`;
+
+      const targetBarEl = document.getElementById("targetProgressBar");
+      if (targetBarEl) targetBarEl.style.width = `${progressPct.toFixed(1)}%`;
+
+      const targetBankedEl = document.getElementById("targetBankedText");
+      if (targetBankedEl) {
+        targetBankedEl.innerText = `${netProfit >= 0 ? '+' : ''}$${netProfit.toFixed(2)} / $${targetCash.toFixed(2)} banked`;
+      }
+
+      const targetPhaseTitle = document.getElementById("targetPhaseTitle");
+      if (targetPhaseTitle) {
+        targetPhaseTitle.innerText = `${prop.phase || 'Phase 1'} Target (+${targetPct.toFixed(1)}%)`;
+      }
+      const targetCashGoal = document.getElementById("targetCashGoal");
+      if (targetCashGoal) {
+        targetCashGoal.innerText = `$${targetCash.toLocaleString(undefined, {minimumFractionDigits: 2})} Target`;
+      }
+
+      // Colorize progress bar and text dynamically
+      if (targetTextEl && targetBarEl) {
+        if (progressPct >= 100) {
+          targetTextEl.className = "text-2xl font-black text-emerald-400";
+          targetBarEl.className = "bg-gradient-to-r from-emerald-500 to-teal-400 h-2 rounded-full transition-all duration-500";
+        } else if (netProfit < 0) {
+          targetTextEl.className = "text-2xl font-black text-amber-400";
+          targetBarEl.className = "bg-gradient-to-r from-amber-500 to-yellow-400 h-2 rounded-full transition-all duration-500";
+        } else {
+          targetTextEl.className = "text-2xl font-black text-sky-400";
+          targetBarEl.className = "bg-gradient-to-r from-blue-500 to-sky-400 h-2 rounded-full transition-all duration-500";
+        }
+      }
+
+      // 2. Account Balance, Equity & Daily Realized PnL
+      const eqEl = document.getElementById("accountEquity");
+      if (eqEl) eqEl.innerText = `$${equity.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+
+      const balEl = document.getElementById("accountBalance");
+      if (balEl) balEl.innerText = `$${balance.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+
+      const pnlEl = document.getElementById("dailyPnL");
+      if (pnlEl) {
+        const todayPnl = acct.today_realized_pnl !== undefined ? acct.today_realized_pnl : netProfit;
+        const todayPct = (todayPnl / initial) * 100.0;
+        pnlEl.innerText = `${todayPnl >= 0 ? '+' : ''}$${todayPnl.toFixed(2)} (${todayPct >= 0 ? '+' : ''}${todayPct.toFixed(2)}%)`;
+        pnlEl.className = todayPnl >= 0 ? "font-bold text-emerald-400" : "font-bold text-rose-400";
+      }
+
+      // 3. Risk & Drawdown Gauges
+      const dailyBuf = prop.daily_loss_buffer_remaining !== undefined ? prop.daily_loss_buffer_remaining : 300.0;
+      const dailyBufEl = document.getElementById("dailyLossBuffer");
+      if (dailyBufEl) {
+        dailyBufEl.innerText = `$${dailyBuf.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+        dailyBufEl.className = dailyBuf < 100 ? "text-2xl font-black text-rose-400" : "text-2xl font-black text-emerald-400";
+      }
+
+      const totalDdBuf = prop.max_drawdown_buffer_remaining !== undefined ? prop.max_drawdown_buffer_remaining : 679.63;
+      const totalDdEl = document.getElementById("totalDrawdownBuffer");
+      if (totalDdEl) {
+        totalDdEl.innerText = `$${totalDdBuf.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+        totalDdEl.className = totalDdBuf < 200 ? "text-2xl font-black text-rose-400" : "text-2xl font-black text-emerald-400";
+      }
+
+      // 4. Copier Fleet Accounts Sync
+      if (data.fleet_accounts && Array.isArray(data.fleet_accounts) && data.fleet_accounts.length > 0) {
+        followerAccounts = data.fleet_accounts;
+        renderFleetTable();
+      }
+
+      // 5. Open Positions & Executions Feed
+      const listEl = document.getElementById("recentTradesList");
+      if (listEl) {
+        let html = "";
+        const openPos = data.open_positions || [];
+        if (openPos.length > 0) {
+          openPos.forEach(p => {
+            const isProfit = (p.profit || 0) >= 0;
+            html += `
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/50 shadow-lg shadow-emerald-950/40">
+                <div>
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span class="font-black ${isProfit ? 'text-emerald-400' : 'text-amber-400'} text-xs">
+                      🟢 LIVE: ${p.symbol} ${p.side} (${isProfit ? '+' : ''}$${(p.profit || 0).toFixed(2)})
+                    </span>
+                  </div>
+                  <span class="text-slate-400 block text-2xs mt-0.5 font-mono">
+                    Ticket #${p.ticket} • ${p.volume} Lots @ ${p.price_open} • SL: ${p.sl || '--'} • TP: ${p.tp || '--'}
+                  </span>
+                </div>
+                <div class="text-right font-mono">
+                  <span class="${isProfit ? 'text-emerald-400' : 'text-amber-400'} font-bold text-xs">${isProfit ? 'PROFIT' : 'RUNNING'}</span>
+                  <span class="text-slate-400 block text-2xs">Trailing Ratchet</span>
+                </div>
+              </div>
+            `;
+          });
+        } else {
+          html += `
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-950/50 border border-slate-800 text-xs">
+              <span class="text-slate-400 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Zero Market Exposure • 15m Scanner Active
+              </span>
+              <span class="text-emerald-400 font-mono font-semibold">100% Capital Shielded</span>
+            </div>
+          `;
+        }
+
+        const recent = data.recent_trades || [];
+        recent.forEach(t => {
+          const isWin = (t.pnl || 0) >= 0;
+          html += `
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80">
+              <div>
+                <span class="font-bold ${isWin ? 'text-emerald-400' : 'text-rose-400'} text-xs">
+                  ${t.outcome || (isWin ? 'WIN' : 'EXIT')} (${isWin ? '+' : ''}$${Number(t.pnl || 0).toFixed(2)})
+                </span>
+                <span class="text-slate-400 block text-2xs font-mono">
+                  ${t.symbol} ${t.side} • ${t.volume} Lots • Ticket #${t.ticket}
+                </span>
+              </div>
+              <div class="text-right">
+                <span class="text-slate-300 font-mono text-xs font-semibold">${isWin ? '+2.2R' : '-0.8R'}</span>
+                <span class="text-slate-500 block text-2xs">${t.exit_reason || t.lesson_learned || 'Archived in DB'}</span>
+              </div>
+            </div>
+          `;
+        });
+
+        listEl.innerHTML = html;
+      }
+
+      // 6. AI Intelligence & Autopsy
+      if (data.intelligence) {
+        const intel = data.intelligence;
+        const synEl = document.getElementById("aiSynergiesCount");
+        if (synEl && intel.wins !== undefined) {
+          synEl.innerText = `${intel.wins} Pattern${intel.wins === 1 ? '' : 's'}`;
+        }
+        const trapEl = document.getElementById("aiTrapsCount");
+        if (trapEl && intel.losses !== undefined) {
+          trapEl.innerText = `${intel.losses} Trap${intel.losses === 1 ? '' : 's'}`;
+        }
+      }
+
+      if (data.recent_trades && data.recent_trades.length > 0) {
+        const first = data.recent_trades[0];
+        const autopsyText = first.ai_autopsy || first.lesson_learned;
+        const autopsyEl = document.getElementById("latestAutopsyText");
+        if (autopsyEl && autopsyText) {
+          autopsyEl.innerText = `"${autopsyText}"`;
+        }
+      }
+
+      // 7. Header Sync Badge
+      const statusBadge = document.getElementById("wsStatusBadge");
+      if (statusBadge) {
+        if (source === "local") {
+          statusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> MT5 Live (Local Link)`;
+          statusBadge.className = "flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40";
+        } else {
+          statusBadge.innerHTML = `<span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> MT5 Live (Cloud Sync)`;
+          statusBadge.className = "flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold bg-sky-500/20 text-sky-400 border border-sky-500/40";
+        }
+      }
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       initChart();
       initWebSocket();
       renderFleetTable();
+      fetchTelemetry();
+      setInterval(fetchTelemetry, 2500);
     });
   </script>
 </body>

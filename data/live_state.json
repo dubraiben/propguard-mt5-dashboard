@@ -44,13 +44,13 @@
       "action": "SELL",
       "confidence": 89.5,
       "market_quality": 84.4542115289359,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.0x ATR, ADX: 40.6)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.5x ATR, ADX: 40.6)"
     },
     "GBPUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 73.14935418793931,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 2.0x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.7x ATR)"
     },
     "USDJPY": {
       "action": "HOLD",
@@ -74,13 +74,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 76.17880908107948,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.1x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.4x ATR)"
     },
     "NZDUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 83.65195627041524,
-      "reason": "No clean alignment: trend_gap=0.09%, atr_pct=0.08%, rsi=40.7, body=0.49"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.1x ATR)"
     },
     "XAUUSD": {
       "action": "HOLD",
@@ -110,7 +110,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 89.20670125053368,
-      "reason": "No clean alignment: Room to low blocked (0.6x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.3x < 1.0x ATR)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T12:31:54.827021+00:00"
+  "updated_at": "2026-10-22T12:35:29.771154+00:00"
 }

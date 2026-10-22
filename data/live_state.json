@@ -44,7 +44,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 81.15909699672615,
-      "reason": "No clean alignment: Oversold exhaustion (RSI 29.3 < 30) | Overextended from 20 EMA (2.0x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 1.8x ATR)"
+      "reason": "No clean alignment: Oversold exhaustion (RSI 29.3 < 30) | Overextended from 20 EMA (2.0x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 1.9x ATR)"
     },
     "GBPUSD": {
       "action": "HOLD",
@@ -80,13 +80,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 81.77700682028025,
-      "reason": "No clean alignment: Room to low blocked (0.7x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.5x < 1.0x ATR)"
     },
     "XAUUSD": {
       "action": "SELL",
       "confidence": 90.1,
       "market_quality": 85.05219985085769,
-      "reason": "15m trend agrees with 1h downtrend (Room: -0.6x ATR, ADX: 31.8)"
+      "reason": "15m trend agrees with 1h downtrend (Room: -0.5x ATR, ADX: 31.8)"
     },
     "US30": {
       "action": "HOLD",
@@ -110,7 +110,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 81.84617242211984,
-      "reason": "No clean alignment: Room to low blocked (0.3x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.9x < 1.0x ATR)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T14:10:40.486216+00:00"
+  "updated_at": "2026-10-22T14:13:44.640925+00:00"
 }

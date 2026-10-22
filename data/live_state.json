@@ -43,74 +43,74 @@
     "EURUSD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 55.8008291598844,
-      "reason": "Market quality below threshold: trend_gap=0.06%, atr_pct=0.07%, rsi=23.0, body=0.26"
+      "market_quality": 64.17616765492939,
+      "reason": "Market quality below threshold: trend_gap=0.07%, atr_pct=0.07%, rsi=27.5, body=0.49"
     },
     "GBPUSD": {
       "action": "HOLD",
-      "confidence": 50,
-      "market_quality": 44.045738663469436,
-      "reason": "Market quality below threshold: trend_gap=0.03%, atr_pct=0.07%, rsi=23.9, body=0.13"
+      "confidence": 55,
+      "market_quality": 74.78121276251193,
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.8x ATR)"
     },
     "USDJPY": {
       "action": "HOLD",
-      "confidence": 50,
-      "market_quality": 64.01313429425562,
-      "reason": "Market quality below threshold: trend_gap=0.22%, atr_pct=0.09%, rsi=31.4, body=0.03"
+      "confidence": 55,
+      "market_quality": 83.72935586326884,
+      "reason": "No clean alignment: trend_gap=0.21%, atr_pct=0.10%, rsi=48.2, body=0.98"
     },
     "AUDUSD": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 65.83118578648342,
-      "reason": "No clean alignment: Oversold exhaustion (RSI 28.3 < 30) | Overextended from 20 EMA (3.4x ATR > 2.0x) | Awaiting 20 EMA pullback or breakout (dist 1.4x ATR)"
+      "market_quality": 83.12594374234595,
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 0.9x ATR)"
     },
     "USDCAD": {
       "action": "HOLD",
-      "confidence": 50,
-      "market_quality": 46.35974465231131,
-      "reason": "Market quality below threshold: trend_gap=0.03%, atr_pct=0.05%, rsi=68.1, body=0.21"
+      "confidence": 55,
+      "market_quality": 71.60389766523946,
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.5x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 78.7778413158848,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.8x ATR)"
+      "market_quality": 90.09135486232465,
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.5x ATR)"
     },
     "NZDUSD": {
       "action": "HOLD",
-      "confidence": 50,
-      "market_quality": 62.543126691227144,
-      "reason": "Market quality below threshold: trend_gap=0.09%, atr_pct=0.08%, rsi=26.3, body=0.21"
+      "confidence": 55,
+      "market_quality": 90.72942493693353,
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.4x ATR)"
     },
     "XAUUSD": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 84.06090373280935,
-      "reason": "No clean alignment: Overextended from 20 EMA (2.6x ATR > 2.0x)"
+      "market_quality": 92.23404255319106,
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.7x ATR)"
     },
     "US30": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 74.6916214908817,
+      "market_quality": 70.09528202247213,
       "reason": "No clean alignment: Outside prime trading session"
     },
     "GER40": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 68.67436003110308,
-      "reason": "No clean alignment: Upper rejection wick too large (47% > 35%)"
+      "market_quality": 88.14000058512147,
+      "reason": "No clean alignment: trend_gap=0.17%, atr_pct=0.17%, rsi=54.7, body=0.77"
     },
     "NAS100": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 89.40438871473383,
+      "market_quality": 88.7037037037037,
       "reason": "No clean alignment: Outside prime trading session"
     },
     "BTCUSD": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 81.05801440196154,
-      "reason": "No clean alignment: trend_gap=0.68%, atr_pct=0.20%, rsi=30.1, body=0.52"
+      "market_quality": 69.25710420454274,
+      "reason": "No clean alignment: Oversold exhaustion (RSI 29.9 < 30)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T11:45:13.885215+00:00"
+  "updated_at": "2026-10-22T11:48:21.866377+00:00"
 }

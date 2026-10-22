@@ -44,7 +44,7 @@
       "action": "SELL",
       "confidence": 89.5,
       "market_quality": 84.4542115289359,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.5x ATR, ADX: 40.6)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.4x ATR, ADX: 40.6)"
     },
     "GBPUSD": {
       "action": "HOLD",
@@ -56,7 +56,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 76.35632114886396,
-      "reason": "No clean alignment: trend_gap=0.18%, atr_pct=0.10%, rsi=50.4, body=0.26"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 0.9x ATR)"
     },
     "AUDUSD": {
       "action": "HOLD",
@@ -74,7 +74,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 76.17880908107948,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.4x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.2x ATR)"
     },
     "NZDUSD": {
       "action": "HOLD",
@@ -110,7 +110,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 89.20670125053368,
-      "reason": "No clean alignment: Room to low blocked (0.3x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.6x < 1.0x ATR)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T12:35:29.771154+00:00"
+  "updated_at": "2026-10-22T12:38:34.843173+00:00"
 }

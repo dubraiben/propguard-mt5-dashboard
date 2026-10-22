@@ -74,19 +74,19 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 65.57540139002336,
-      "reason": "No clean alignment: Overbought exhaustion (RSI 68.0 > 68) | Overextended from 20 EMA (2.5x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 2.4x ATR)"
+      "reason": "No clean alignment: Overbought exhaustion (RSI 68.0 > 68) | Overextended from 20 EMA (2.5x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 2.0x ATR)"
     },
     "NZDUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 75.62472116225891,
-      "reason": "No clean alignment: Upper rejection wick too large (50% > 35%) | Awaiting 20 EMA pullback or breakout (dist 1.2x ATR)"
+      "reason": "No clean alignment: trend_gap=0.10%, atr_pct=0.08%, rsi=39.5, body=0.14"
     },
     "XAUUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 83.01906058543237,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.2x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 0.8x ATR)"
     },
     "US30": {
       "action": "HOLD",
@@ -104,13 +104,13 @@
       "action": "SELL",
       "confidence": 92.8,
       "market_quality": 87.75862068965517,
-      "reason": "15m trend agrees with 1h downtrend (Room: 2.9x ATR, ADX: 29.6)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.4x ATR, ADX: 29.6)"
     },
     "BTCUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 83.88288552978133,
-      "reason": "No clean alignment: Oversold exhaustion (RSI 29.9 < 30) | Awaiting 20 EMA pullback or breakdown (dist 1.7x ATR)"
+      "reason": "No clean alignment: Oversold exhaustion (RSI 29.9 < 30) | Awaiting 20 EMA pullback or breakdown (dist 1.8x ATR)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T12:48:18.551471+00:00"
+  "updated_at": "2026-10-22T12:51:52.810027+00:00"
 }

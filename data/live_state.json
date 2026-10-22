@@ -44,7 +44,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 88.44970011328239,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.3x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.2x ATR)"
     },
     "GBPUSD": {
       "action": "HOLD",
@@ -80,25 +80,25 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 90.55301957090099,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 0.8x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.0x ATR)"
     },
     "XAUUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 87.01663201663162,
-      "reason": "No clean alignment: Room to low blocked (0.1x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.2x < 1.0x ATR)"
     },
     "US30": {
       "action": "BUY",
       "confidence": 76.3,
       "market_quality": 71.34354907546432,
-      "reason": "15m trend agrees with 1h uptrend (Room: 0.1x ATR, ADX: 25.6)"
+      "reason": "15m trend agrees with 1h uptrend (Room: -0.4x ATR, ADX: 25.6)"
     },
     "GER40": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 73.41631365087582,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.3x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.0x ATR)"
     },
     "NAS100": {
       "action": "HOLD",
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T16:06:46.206932+00:00"
+  "updated_at": "2026-10-22T16:09:54.008893+00:00"
 }

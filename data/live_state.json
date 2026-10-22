@@ -56,7 +56,7 @@
       "action": "SELL",
       "confidence": 87.0,
       "market_quality": 81.97527993579772,
-      "reason": "15m trend agrees with 1h downtrend (Room: 2.4x ATR, ADX: 50.4)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.3x ATR, ADX: 50.4)"
     },
     "AUDUSD": {
       "action": "HOLD",
@@ -74,7 +74,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 86.0052334035602,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.0x ATR)"
+      "reason": "No clean alignment: trend_gap=0.08%, atr_pct=0.09%, rsi=56.7, body=0.69"
     },
     "NZDUSD": {
       "action": "HOLD",
@@ -86,7 +86,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 82.44073455759613,
-      "reason": "No clean alignment: Overextended from 20 EMA (2.5x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 1.5x ATR)"
+      "reason": "No clean alignment: Overextended from 20 EMA (2.5x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 0.7x ATR)"
     },
     "US30": {
       "action": "HOLD",
@@ -98,19 +98,19 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 75.66017504721911,
-      "reason": "No clean alignment: Room to high blocked (0.6x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to high blocked (0.4x < 1.0x ATR)"
     },
     "NAS100": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 87.26495726495726,
-      "reason": "No clean alignment: trend_gap=0.30%, atr_pct=0.17%, rsi=49.1, body=0.29"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 0.8x ATR)"
     },
     "BTCUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 88.0,
-      "reason": "No clean alignment: Oversold exhaustion (RSI 26.2 < 30) | Overextended from 20 EMA (2.3x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 1.9x ATR)"
+      "reason": "No clean alignment: Oversold exhaustion (RSI 26.2 < 30) | Overextended from 20 EMA (2.3x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 1.5x ATR)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T12:10:20.970267+00:00"
+  "updated_at": "2026-10-22T12:13:25.634142+00:00"
 }

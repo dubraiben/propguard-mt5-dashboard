@@ -4,12 +4,12 @@
     "server": "Deriv-Demo",
     "currency": "USD",
     "balance": 10003.95,
-    "equity": 10003.95,
+    "equity": 10007.19,
     "initial_size": 10000.0,
     "net_profit": 3.95,
     "net_profit_pct": 0.04,
     "today_realized_pnl": -20.2,
-    "trades_today": 3,
+    "trades_today": 4,
     "is_capital_safe": true
   },
   "prop_firm": {
@@ -19,19 +19,42 @@
     "current_profit": 3.95,
     "progress_pct": 0.49,
     "daily_loss_limit_cash": 300.72,
-    "daily_loss_buffer_remaining": 280.52,
+    "daily_loss_buffer_remaining": 283.76,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 653.95,
+    "max_drawdown_buffer_remaining": 657.19,
     "status": "ACTIVE"
   },
-  "open_positions": [],
+  "open_positions": [
+    {
+      "ticket": 5812795440,
+      "symbol": "XAUUSD",
+      "side": "SELL",
+      "volume": 0.04,
+      "price_open": 4075.23,
+      "sl": 4087.22,
+      "tp": 4055.33,
+      "profit": 1.16,
+      "comment": "PropGuard:98%"
+    },
+    {
+      "ticket": 5812795451,
+      "symbol": "XAUUSD",
+      "side": "SELL",
+      "volume": 0.04,
+      "price_open": 4075.46,
+      "sl": 4087.22,
+      "tp": 4055.33,
+      "profit": 2.08,
+      "comment": "PropGuard #5812795440"
+    }
+  ],
   "fleet_accounts": [
     {
       "firm": "Deriv Prop",
       "login": 6350807,
       "server": "Deriv-Demo",
       "balance": 10003.95,
-      "equity": 10003.95,
+      "equity": 10007.19,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
       "realized": 3.95,
@@ -56,19 +79,19 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 85.22705283122247,
-      "reason": "No clean alignment: Room to low blocked (0.5x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.3x < 1.0x ATR)"
     },
     "AUDUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 75.31511651808925,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 2.5x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 3.1x ATR)"
     },
     "USDCAD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 77.55168970703187,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.8x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.5x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
@@ -86,13 +109,13 @@
       "action": "SELL",
       "confidence": 98.0,
       "market_quality": 99.87767584097917,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.0x ATR, ADX: 38.0)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.1x ATR, ADX: 38.0)"
     },
     "US30": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 81.01561888027155,
-      "reason": "No clean alignment: Outside prime trading session | Awaiting 20 EMA pullback or breakout (dist 0.9x ATR)"
+      "reason": "No clean alignment: Outside prime trading session"
     },
     "GER40": {
       "action": "HOLD",
@@ -211,5 +234,5 @@
     "win_rate": 100.0,
     "total_trades": 5
   },
-  "updated_at": "2026-10-22T11:03:46.730022+00:00"
+  "updated_at": "2026-10-22T11:07:00.196822+00:00"
 }

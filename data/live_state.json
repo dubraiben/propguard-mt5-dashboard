@@ -4,7 +4,7 @@
     "server": "Deriv-Demo",
     "currency": "USD",
     "balance": 10003.95,
-    "equity": 10007.19,
+    "equity": 10015.27,
     "initial_size": 10000.0,
     "net_profit": 3.95,
     "net_profit_pct": 0.04,
@@ -19,9 +19,9 @@
     "current_profit": 3.95,
     "progress_pct": 0.49,
     "daily_loss_limit_cash": 300.72,
-    "daily_loss_buffer_remaining": 283.76,
+    "daily_loss_buffer_remaining": 291.84,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 657.19,
+    "max_drawdown_buffer_remaining": 665.27,
     "status": "ACTIVE"
   },
   "open_positions": [
@@ -33,7 +33,7 @@
       "price_open": 4075.23,
       "sl": 4087.22,
       "tp": 4055.33,
-      "profit": 1.16,
+      "profit": 5.2,
       "comment": "PropGuard:98%"
     },
     {
@@ -44,7 +44,7 @@
       "price_open": 4075.46,
       "sl": 4087.22,
       "tp": 4055.33,
-      "profit": 2.08,
+      "profit": 6.12,
       "comment": "PropGuard #5812795440"
     }
   ],
@@ -54,7 +54,7 @@
       "login": 6350807,
       "server": "Deriv-Demo",
       "balance": 10003.95,
-      "equity": 10007.19,
+      "equity": 10015.27,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
       "realized": 3.95,
@@ -85,13 +85,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 75.31511651808925,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 3.1x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 3.4x ATR)"
     },
     "USDCAD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 77.55168970703187,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.5x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 3.1x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
@@ -234,5 +234,5 @@
     "win_rate": 100.0,
     "total_trades": 5
   },
-  "updated_at": "2026-10-22T11:07:00.196822+00:00"
+  "updated_at": "2026-10-22T11:10:08.028267+00:00"
 }

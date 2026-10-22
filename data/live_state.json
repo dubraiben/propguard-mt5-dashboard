@@ -8,18 +8,18 @@
     "initial_size": 10000.0,
     "net_profit": 3.95,
     "net_profit_pct": 0.04,
-    "today_realized_pnl": 3.95,
-    "trades_today": 5,
+    "today_realized_pnl": -20.2,
+    "trades_today": 3,
     "is_capital_safe": true
   },
   "prop_firm": {
-    "phase": "PHASE 1",
+    "phase": "PHASE1",
     "target_pct": 8.0,
     "target_cash": 800.0,
     "current_profit": 3.95,
     "progress_pct": 0.49,
-    "daily_loss_limit_cash": 300.0,
-    "daily_loss_buffer_remaining": 300.0,
+    "daily_loss_limit_cash": 300.72,
+    "daily_loss_buffer_remaining": 280.52,
     "max_drawdown_limit_cash": 650.0,
     "max_drawdown_buffer_remaining": 653.95,
     "status": "ACTIVE"
@@ -39,6 +39,7 @@
       "status": "ACTIVE"
     }
   ],
+  "signals": {},
   "recent_trades": [
     {
       "ticket": 5812695654,
@@ -137,5 +138,5 @@
     "win_rate": 100.0,
     "total_trades": 5
   },
-  "updated_at": "2026-10-22T10:31:00.000000+00:00"
+  "updated_at": "2026-10-22T10:34:30.628495+00:00"
 }

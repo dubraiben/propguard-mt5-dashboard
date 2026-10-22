@@ -56,7 +56,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 65.12466287081281,
-      "reason": "No clean alignment: trend_gap=0.15%, atr_pct=0.09%, rsi=49.1, body=0.35"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.1x ATR)"
     },
     "AUDUSD": {
       "action": "HOLD",
@@ -86,7 +86,7 @@
       "action": "SELL",
       "confidence": 95.0,
       "market_quality": 90.0,
-      "reason": "15m trend agrees with 1h downtrend (Room: 2.0x ATR, ADX: 34.2)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.8x ATR, ADX: 34.2)"
     },
     "US30": {
       "action": "HOLD",
@@ -104,7 +104,7 @@
       "action": "SELL",
       "confidence": 98.0,
       "market_quality": 96.50551626378378,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.3x ATR, ADX: 26.8)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.7x ATR, ADX: 26.8)"
     },
     "BTCUSD": {
       "action": "HOLD",
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T13:20:20.387926+00:00"
+  "updated_at": "2026-10-22T13:23:28.418273+00:00"
 }

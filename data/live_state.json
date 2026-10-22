@@ -62,19 +62,19 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 83.12594374234595,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.2x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 0.9x ATR)"
     },
     "USDCAD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 71.60389766523946,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.2x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.5x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 90.09135486232465,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.3x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.4x ATR)"
     },
     "NZDUSD": {
       "action": "HOLD",
@@ -86,7 +86,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 92.23404255319106,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.6x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.8x ATR)"
     },
     "US30": {
       "action": "HOLD",
@@ -110,7 +110,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 69.25710420454274,
-      "reason": "No clean alignment: Oversold exhaustion (RSI 29.9 < 30) | Room to low blocked (0.9x < 1.0x ATR)"
+      "reason": "No clean alignment: Oversold exhaustion (RSI 29.9 < 30) | Room to low blocked (0.8x < 1.0x ATR)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T11:54:41.730540+00:00"
+  "updated_at": "2026-10-22T11:57:53.302885+00:00"
 }

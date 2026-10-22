@@ -56,25 +56,25 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 70.66604926885499,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.9x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.6x ATR)"
     },
     "AUDUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 78.47219294996816,
-      "reason": "No clean alignment: Overextended from 20 EMA (2.9x ATR > 2.0x) | Awaiting 20 EMA pullback or breakout (dist 3.5x ATR)"
+      "reason": "No clean alignment: Overextended from 20 EMA (2.9x ATR > 2.0x) | Awaiting 20 EMA pullback or breakout (dist 3.7x ATR)"
     },
     "USDCAD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 71.06522682451259,
-      "reason": "No clean alignment: Overextended from 20 EMA (2.2x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 1.8x ATR)"
+      "reason": "No clean alignment: Overextended from 20 EMA (2.2x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 2.3x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 91.68115394364027,
-      "reason": "No clean alignment: trend_gap=0.12%, atr_pct=0.09%, rsi=53.0, body=0.56"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 0.8x ATR)"
     },
     "NZDUSD": {
       "action": "HOLD",
@@ -86,13 +86,13 @@
       "action": "SELL",
       "confidence": 98.0,
       "market_quality": 100.0,
-      "reason": "15m trend agrees with 1h downtrend (Room: -2.4x ATR, ADX: 38.8)"
+      "reason": "15m trend agrees with 1h downtrend (Room: -1.6x ATR, ADX: 38.8)"
     },
     "US30": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 70.44317483171177,
-      "reason": "No clean alignment: Outside prime trading session | Upper rejection wick too large (62% > 35%) | Awaiting 20 EMA pullback or breakout (dist 0.9x ATR)"
+      "reason": "No clean alignment: Outside prime trading session | Upper rejection wick too large (62% > 35%)"
     },
     "GER40": {
       "action": "HOLD",
@@ -110,7 +110,7 @@
       "action": "SELL",
       "confidence": 98.0,
       "market_quality": 99.21078282058812,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.4x ATR, ADX: 58.5)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.3x ATR, ADX: 58.5)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T11:25:44.125053+00:00"
+  "updated_at": "2026-10-22T11:28:48.333008+00:00"
 }

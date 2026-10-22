@@ -104,13 +104,13 @@
       "action": "SELL",
       "confidence": 90.5,
       "market_quality": 85.51435219770349,
-      "reason": "15m trend agrees with 1h downtrend (Room: 2.1x ATR, ADX: 27.7)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.6x ATR, ADX: 27.7)"
     },
     "BTCUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 74.98340003220036,
-      "reason": "No clean alignment: Oversold exhaustion (RSI 28.5 < 30) | Overextended from 20 EMA (2.1x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 2.2x ATR)"
+      "reason": "No clean alignment: Oversold exhaustion (RSI 28.5 < 30) | Overextended from 20 EMA (2.1x ATR > 2.0x)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T13:10:56.014808+00:00"
+  "updated_at": "2026-10-22T13:14:01.765437+00:00"
 }

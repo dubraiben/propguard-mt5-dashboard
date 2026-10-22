@@ -56,13 +56,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 78.14569284573003,
-      "reason": "No clean alignment: Room to low blocked (0.7x < 1.0x ATR)"
+      "reason": "No clean alignment: Room to low blocked (0.6x < 1.0x ATR)"
     },
     "AUDUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 65.28805905353232,
-      "reason": "No clean alignment: ADX choppy (13.1 < 18) | Awaiting 20 EMA pullback or breakout (dist 0.9x ATR)"
+      "reason": "No clean alignment: ADX choppy (13.1 < 18) | Awaiting 20 EMA pullback or breakout (dist 1.1x ATR)"
     },
     "USDCAD": {
       "action": "HOLD",
@@ -86,7 +86,7 @@
       "action": "SELL",
       "confidence": 98.0,
       "market_quality": 85.47842401501045,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.9x ATR, ADX: 37.9) | \ud83e\udde0 A+ Setup Synergy: Pattern 'XAUUSD:SELL:weak_<0.25%:neutral_45-55' has 100% win rate (2/2)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.8x ATR, ADX: 37.9) | \ud83e\udde0 A+ Setup Synergy: Pattern 'XAUUSD:SELL:weak_<0.25%:neutral_45-55' has 100% win rate (2/2)"
     },
     "US30": {
       "action": "HOLD",
@@ -211,5 +211,5 @@
     "win_rate": 100.0,
     "total_trades": 5
   },
-  "updated_at": "2026-10-22T10:54:29.618118+00:00"
+  "updated_at": "2026-10-22T10:57:35.437256+00:00"
 }

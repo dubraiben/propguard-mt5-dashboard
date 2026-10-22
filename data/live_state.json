@@ -80,7 +80,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 68.79701075582194,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 2.1x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 2.0x ATR)"
     },
     "XAUUSD": {
       "action": "HOLD",
@@ -110,7 +110,7 @@
       "action": "SELL",
       "confidence": 88.9,
       "market_quality": 83.91166626822897,
-      "reason": "15m trend agrees with 1h downtrend (Room: 3.1x ATR, ADX: 64.1)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.5x ATR, ADX: 64.1)"
     }
   },
   "recent_trades": [
@@ -211,5 +211,5 @@
     "win_rate": 100.0,
     "total_trades": 5
   },
-  "updated_at": "2026-10-22T10:41:10.595511+00:00"
+  "updated_at": "2026-10-22T10:44:14.718103+00:00"
 }

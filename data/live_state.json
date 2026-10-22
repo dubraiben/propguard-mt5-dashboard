@@ -3,12 +3,12 @@
     "login": 6350807,
     "server": "Deriv-Demo",
     "currency": "USD",
-    "balance": 10003.95,
-    "equity": 10043.35,
+    "balance": 10027.71,
+    "equity": 10027.71,
     "initial_size": 10000.0,
-    "net_profit": 3.95,
-    "net_profit_pct": 0.04,
-    "today_realized_pnl": -20.2,
+    "net_profit": 27.71,
+    "net_profit_pct": 0.28,
+    "today_realized_pnl": 3.56,
     "trades_today": 4,
     "is_capital_safe": true
   },
@@ -16,49 +16,26 @@
     "phase": "PHASE1",
     "target_pct": 8.0,
     "target_cash": 800.0,
-    "current_profit": 3.95,
-    "progress_pct": 0.49,
+    "current_profit": 27.71,
+    "progress_pct": 3.46,
     "daily_loss_limit_cash": 300.72,
     "daily_loss_buffer_remaining": 300.72,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 693.35,
+    "max_drawdown_buffer_remaining": 677.71,
     "status": "ACTIVE"
   },
-  "open_positions": [
-    {
-      "ticket": 5812795440,
-      "symbol": "XAUUSD",
-      "side": "SELL",
-      "volume": 0.04,
-      "price_open": 4075.23,
-      "sl": 4087.22,
-      "tp": 4055.33,
-      "profit": 19.24,
-      "comment": "PropGuard:98%"
-    },
-    {
-      "ticket": 5812795451,
-      "symbol": "XAUUSD",
-      "side": "SELL",
-      "volume": 0.04,
-      "price_open": 4075.46,
-      "sl": 4087.22,
-      "tp": 4055.33,
-      "profit": 20.16,
-      "comment": "PropGuard #5812795440"
-    }
-  ],
+  "open_positions": [],
   "fleet_accounts": [
     {
       "firm": "Deriv Prop",
       "login": 6350807,
       "server": "Deriv-Demo",
-      "balance": 10003.95,
-      "equity": 10043.35,
+      "balance": 10027.71,
+      "equity": 10027.71,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
-      "realized": 3.95,
-      "fee": 0.79,
+      "realized": 27.71,
+      "fee": 5.54,
       "status": "ACTIVE"
     }
   ],
@@ -79,25 +56,25 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 70.66604926885499,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.8x ATR)"
+      "reason": "No clean alignment: trend_gap=0.22%, atr_pct=0.09%, rsi=31.6, body=0.30"
     },
     "AUDUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 78.47219294996816,
-      "reason": "No clean alignment: Overextended from 20 EMA (2.9x ATR > 2.0x) | Awaiting 20 EMA pullback or breakout (dist 2.9x ATR)"
+      "reason": "No clean alignment: Overextended from 20 EMA (2.9x ATR > 2.0x) | Awaiting 20 EMA pullback or breakout (dist 2.5x ATR)"
     },
     "USDCAD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 71.06522682451259,
-      "reason": "No clean alignment: Overextended from 20 EMA (2.2x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 2.4x ATR)"
+      "reason": "No clean alignment: Overextended from 20 EMA (2.2x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 1.5x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 91.68115394364027,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 0.9x ATR)"
+      "reason": "No clean alignment: trend_gap=0.12%, atr_pct=0.09%, rsi=53.0, body=0.56"
     },
     "NZDUSD": {
       "action": "HOLD",
@@ -108,14 +85,14 @@
     "XAUUSD": {
       "action": "SELL",
       "confidence": 98.0,
-      "market_quality": 99.87767584097917,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.1x ATR, ADX: 38.0)"
+      "market_quality": 100.0,
+      "reason": "15m trend agrees with 1h downtrend (Room: -0.8x ATR, ADX: 38.8)"
     },
     "US30": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 70.44317483171177,
-      "reason": "No clean alignment: Outside prime trading session | Upper rejection wick too large (62% > 35%) | Awaiting 20 EMA pullback or breakout (dist 0.9x ATR)"
+      "reason": "No clean alignment: Outside prime trading session | Upper rejection wick too large (62% > 35%)"
     },
     "GER40": {
       "action": "HOLD",
@@ -133,10 +110,28 @@
       "action": "SELL",
       "confidence": 98.0,
       "market_quality": 99.21078282058812,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.8x ATR, ADX: 58.5)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.1x ATR, ADX: 58.5)"
     }
   },
   "recent_trades": [
+    {
+      "ticket": 5812795440,
+      "symbol": "XAUUSD",
+      "side": "SELL",
+      "volume": 0.04,
+      "entry_price": 50.0,
+      "exit_price": 4072.21,
+      "sl": 4087.2204,
+      "tp": 4055.3261,
+      "pnl": 12.08,
+      "outcome": "WIN",
+      "open_time": "2026-10-22T11:05:52.553247+00:00",
+      "close_time": "2026-10-22T11:17:29.344101+00:00",
+      "features_json": "{\"symbol\": \"XAUUSD\", \"side\": \"SELL\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"conviction_>0.65\", \"session\": \"london_ny\", \"hour\": 11, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.78, \"timestamp\": \"2026-10-22T11:05:52.553247+00:00\"}",
+      "ai_autopsy": "The trade won due to high-conviction directional expansion during the London-NY crossover, where a strong 0.78 body ratio breached the neutral RSI baseline to trigger immediate follow-through. The execution engine must remember that high body conviction in normal volatility can overcome neutral momentum states, validating short entries even when trend gaps are compressed.",
+      "lesson_learned": "The trade won due to high-conviction directional expansion during the London-NY crossover, where a strong 0.78 body ratio breached the neutral RSI baseline to trigger immediate follow-through. The execution engine must remember that high body conviction in normal volatility can overcome neutral momentum states, validating short entries even when trend gaps are compressed.",
+      "created_at": "2026-10-22 11:17:29"
+    },
     {
       "ticket": 5812695654,
       "symbol": "XAUUSD",
@@ -229,10 +224,10 @@
     }
   ],
   "intelligence": {
-    "wins": 5,
+    "wins": 6,
     "losses": 0,
     "win_rate": 100.0,
-    "total_trades": 5
+    "total_trades": 6
   },
-  "updated_at": "2026-10-22T11:16:21.420084+00:00"
+  "updated_at": "2026-10-22T11:19:34.782000+00:00"
 }

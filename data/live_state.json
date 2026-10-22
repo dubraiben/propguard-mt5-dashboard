@@ -50,13 +50,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 70.08618414769255,
-      "reason": "No clean alignment: Upper rejection wick too large (54% > 35%) | Awaiting 20 EMA pullback or breakout (dist 1.0x ATR)"
+      "reason": "No clean alignment: Upper rejection wick too large (54% > 35%) | Awaiting 20 EMA pullback or breakout (dist 0.8x ATR)"
     },
     "USDJPY": {
       "action": "SELL",
       "confidence": 82.0,
       "market_quality": 77.011778281828,
-      "reason": "15m trend agrees with 1h downtrend (Room: 2.5x ATR, ADX: 40.6)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.4x ATR, ADX: 40.6)"
     },
     "AUDUSD": {
       "action": "HOLD",
@@ -92,7 +92,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 69.86964153324044,
-      "reason": "No clean alignment: trend_gap=0.08%, atr_pct=0.11%, rsi=49.1, body=0.57"
+      "reason": "No clean alignment: Room to high blocked (0.5x < 1.0x ATR)"
     },
     "GER40": {
       "action": "HOLD",
@@ -104,13 +104,13 @@
       "action": "SELL",
       "confidence": 90.5,
       "market_quality": 85.51435219770349,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.9x ATR, ADX: 27.7)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.8x ATR, ADX: 27.7)"
     },
     "BTCUSD": {
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 74.98340003220036,
-      "reason": "No clean alignment: Oversold exhaustion (RSI 28.5 < 30) | Overextended from 20 EMA (2.1x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 2.1x ATR)"
+      "reason": "No clean alignment: Oversold exhaustion (RSI 28.5 < 30) | Overextended from 20 EMA (2.1x ATR > 2.0x)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T13:01:08.476254+00:00"
+  "updated_at": "2026-10-22T13:04:13.785502+00:00"
 }

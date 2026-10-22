@@ -43,74 +43,74 @@
     "EURUSD": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 81.53888320103627,
-      "reason": "No clean alignment: trend_gap=0.09%, atr_pct=0.07%, rsi=37.0, body=0.45"
+      "market_quality": 71.1770129916651,
+      "reason": "No clean alignment: trend_gap=0.09%, atr_pct=0.07%, rsi=36.9, body=0.02"
     },
     "GBPUSD": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 70.08618414769255,
-      "reason": "No clean alignment: Upper rejection wick too large (54% > 35%)"
+      "market_quality": 71.11506766249795,
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 1.1x ATR)"
     },
     "USDJPY": {
-      "action": "SELL",
-      "confidence": 82.0,
-      "market_quality": 77.011778281828,
-      "reason": "15m trend agrees with 1h downtrend (Room: 2.9x ATR, ADX: 40.6)"
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 65.12466287081281,
+      "reason": "No clean alignment: trend_gap=0.15%, atr_pct=0.09%, rsi=49.1, body=0.35"
     },
     "AUDUSD": {
       "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 65.70708587603367,
-      "reason": "No clean alignment: trend_gap=0.06%, atr_pct=0.08%, rsi=46.2, body=0.60"
+      "confidence": 50,
+      "market_quality": 60.24093417762835,
+      "reason": "Market quality below threshold: trend_gap=0.05%, atr_pct=0.08%, rsi=48.9, body=0.40"
     },
     "USDCAD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 56.75092633201861,
-      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.04%, rsi=55.0, body=0.37"
+      "market_quality": 54.097618429205355,
+      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.05%, rsi=48.0, body=0.66"
     },
     "USDCHF": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 62.20628754939324,
-      "reason": "Market quality below threshold: trend_gap=0.03%, atr_pct=0.09%, rsi=64.9, body=0.33"
+      "market_quality": 53.41149802324261,
+      "reason": "Market quality below threshold: trend_gap=0.02%, atr_pct=0.09%, rsi=65.2, body=0.11"
     },
     "NZDUSD": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 76.6544200580198,
-      "reason": "No clean alignment: trend_gap=0.10%, atr_pct=0.08%, rsi=38.8, body=0.15"
+      "market_quality": 86.17028895173667,
+      "reason": "No clean alignment: trend_gap=0.10%, atr_pct=0.08%, rsi=43.3, body=0.54"
     },
     "XAUUSD": {
-      "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 96.30639097744324,
-      "reason": "No clean alignment: trend_gap=0.28%, atr_pct=0.24%, rsi=53.3, body=0.65"
+      "action": "SELL",
+      "confidence": 95.0,
+      "market_quality": 90.0,
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.0x ATR, ADX: 34.2)"
     },
     "US30": {
       "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 69.86964153324044,
-      "reason": "No clean alignment: Room to high blocked (0.7x < 1.0x ATR)"
+      "confidence": 50,
+      "market_quality": 57.08084297026741,
+      "reason": "Market quality below threshold: trend_gap=0.07%, atr_pct=0.11%, rsi=49.7, body=0.08"
     },
     "GER40": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 57.09108417987022,
-      "reason": "Market quality below threshold: trend_gap=0.07%, atr_pct=0.15%, rsi=64.3, body=0.08"
+      "market_quality": 58.91621127230839,
+      "reason": "Market quality below threshold: trend_gap=0.05%, atr_pct=0.15%, rsi=65.4, body=0.26"
     },
     "NAS100": {
       "action": "SELL",
-      "confidence": 90.5,
-      "market_quality": 85.51435219770349,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.6x ATR, ADX: 27.7)"
+      "confidence": 98.0,
+      "market_quality": 96.50551626378378,
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.4x ATR, ADX: 26.8)"
     },
     "BTCUSD": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 74.98340003220036,
-      "reason": "No clean alignment: Oversold exhaustion (RSI 28.5 < 30) | Overextended from 20 EMA (2.1x ATR > 2.0x)"
+      "market_quality": 82.85156714803287,
+      "reason": "No clean alignment: Oversold exhaustion (RSI 26.1 < 30) | Overextended from 20 EMA (2.5x ATR > 2.0x)"
     }
   },
   "recent_trades": [
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-22T13:14:01.765437+00:00"
+  "updated_at": "2026-10-22T13:17:09.626145+00:00"
 }

@@ -4,11 +4,11 @@
     "server": "Deriv-Demo",
     "currency": "USD",
     "balance": 10128.75,
-    "equity": 10122.55,
+    "equity": 10113.27,
     "initial_size": 10000.0,
     "net_profit": 128.75,
     "net_profit_pct": 1.29,
-    "today_realized_pnl": 50.61,
+    "today_realized_pnl": 74.1,
     "trades_today": 6,
     "is_capital_safe": true
   },
@@ -21,7 +21,7 @@
     "daily_loss_limit_cash": 300.83,
     "daily_loss_buffer_remaining": 300.83,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 772.55,
+    "max_drawdown_buffer_remaining": 763.27,
     "status": "ACTIVE"
   },
   "open_positions": [
@@ -33,7 +33,7 @@
       "price_open": 0.70304,
       "sl": 0.70237,
       "tp": 0.70396,
-      "profit": -17.0,
+      "profit": -16.15,
       "comment": "PropGuard:75%"
     },
     {
@@ -44,7 +44,7 @@
       "price_open": 0.70305,
       "sl": 0.70237,
       "tp": 0.70396,
-      "profit": -17.85,
+      "profit": -17.0,
       "comment": "PropGuard #5814285655"
     },
     {
@@ -55,7 +55,7 @@
       "price_open": 3996.2,
       "sl": 4012.62,
       "tp": 3968.87,
-      "profit": 14.25,
+      "profit": 8.76,
       "comment": "PropGuard:98%"
     },
     {
@@ -66,7 +66,7 @@
       "price_open": 3996.25,
       "sl": 4012.62,
       "tp": 3968.87,
-      "profit": 14.4,
+      "profit": 8.91,
       "comment": "PropGuard #5814285664"
     }
   ],
@@ -76,7 +76,7 @@
       "login": 6350807,
       "server": "Deriv-Demo",
       "balance": 10128.75,
-      "equity": 10122.55,
+      "equity": 10113.27,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
       "realized": 128.75,
@@ -119,7 +119,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 89.0194003181444,
-      "reason": "No clean alignment: Upper rejection wick too large (40% > 35%)"
+      "reason": "No clean alignment: Upper rejection wick too large (40% > 35%) | Room to high blocked (0.1x < 1.0x ATR)"
     },
     "NZDUSD": {
       "action": "BUY",
@@ -274,5 +274,5 @@
     "win_rate": 90.0,
     "total_trades": 10
   },
-  "updated_at": "2026-10-23T17:15:14.170445+00:00"
+  "updated_at": "2026-10-23T17:18:21.744558+00:00"
 }

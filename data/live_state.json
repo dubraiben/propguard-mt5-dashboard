@@ -50,7 +50,7 @@
       "action": "SELL",
       "confidence": 79.4,
       "market_quality": 74.37151300853074,
-      "reason": "15m trend agrees with 1h downtrend (Room: -0.4x ATR, ADX: 11.9)"
+      "reason": "15m trend agrees with 1h downtrend (Room: -0.1x ATR, ADX: 11.9)"
     },
     "USDJPY": {
       "action": "HOLD",
@@ -68,7 +68,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 67.83127509591891,
-      "reason": "No clean alignment: Overextended from 20 EMA (2.2x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 2.4x ATR)"
+      "reason": "No clean alignment: Overextended from 20 EMA (2.2x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 2.1x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
@@ -92,13 +92,13 @@
       "action": "SELL",
       "confidence": 98.0,
       "market_quality": 95.67040957100414,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.9x ATR, ADX: 34.1)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.6x ATR, ADX: 34.1)"
     },
     "GER40": {
       "action": "SELL",
       "confidence": 92.3,
       "market_quality": 77.33380487371606,
-      "reason": "15m trend agrees with 1h downtrend (Room: 2.9x ATR, ADX: 18.3) | \ud83e\udde0 A+ Setup Synergy: Pattern 'GER40:SELL:weak_<0.25%:neutral_45-55' has 100% win rate (2/2)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.7x ATR, ADX: 18.3) | \ud83e\udde0 A+ Setup Synergy: Pattern 'GER40:SELL:weak_<0.25%:neutral_45-55' has 100% win rate (2/2)"
     },
     "NAS100": {
       "action": "HOLD",
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 9
   },
-  "updated_at": "2026-10-23T16:56:01.307720+00:00"
+  "updated_at": "2026-10-23T16:59:09.631315+00:00"
 }

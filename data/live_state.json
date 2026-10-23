@@ -4,11 +4,11 @@
     "server": "Deriv-Demo",
     "currency": "USD",
     "balance": 10128.75,
-    "equity": 10113.27,
+    "equity": 10124.81,
     "initial_size": 10000.0,
     "net_profit": 128.75,
     "net_profit_pct": 1.29,
-    "today_realized_pnl": 74.1,
+    "today_realized_pnl": 151.04,
     "trades_today": 6,
     "is_capital_safe": true
   },
@@ -21,7 +21,7 @@
     "daily_loss_limit_cash": 300.83,
     "daily_loss_buffer_remaining": 300.83,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 763.27,
+    "max_drawdown_buffer_remaining": 774.81,
     "status": "ACTIVE"
   },
   "open_positions": [
@@ -33,7 +33,7 @@
       "price_open": 0.70304,
       "sl": 0.70237,
       "tp": 0.70396,
-      "profit": -16.15,
+      "profit": -5.1,
       "comment": "PropGuard:75%"
     },
     {
@@ -44,7 +44,7 @@
       "price_open": 0.70305,
       "sl": 0.70237,
       "tp": 0.70396,
-      "profit": -17.0,
+      "profit": -5.95,
       "comment": "PropGuard #5814285655"
     },
     {
@@ -55,7 +55,7 @@
       "price_open": 3996.2,
       "sl": 4012.62,
       "tp": 3968.87,
-      "profit": 8.76,
+      "profit": 3.48,
       "comment": "PropGuard:98%"
     },
     {
@@ -66,7 +66,7 @@
       "price_open": 3996.25,
       "sl": 4012.62,
       "tp": 3968.87,
-      "profit": 8.91,
+      "profit": 3.63,
       "comment": "PropGuard #5814285664"
     }
   ],
@@ -76,7 +76,7 @@
       "login": 6350807,
       "server": "Deriv-Demo",
       "balance": 10128.75,
-      "equity": 10113.27,
+      "equity": 10124.81,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
       "realized": 128.75,
@@ -86,22 +86,22 @@
   ],
   "signals": {
     "EURUSD": {
-      "action": "HOLD",
-      "confidence": 50,
-      "market_quality": 61.5814783391223,
-      "reason": "Market quality below threshold: trend_gap=0.03%, atr_pct=0.05%, rsi=43.0, body=0.34"
+      "action": "SELL",
+      "confidence": 78.9,
+      "market_quality": 73.8574494902226,
+      "reason": "15m trend agrees with 1h downtrend (Room: -0.2x ATR, ADX: 14.7)"
     },
     "GBPUSD": {
       "action": "HOLD",
-      "confidence": 50,
-      "market_quality": 64.92434007832104,
-      "reason": "Market quality below threshold: trend_gap=0.04%, atr_pct=0.05%, rsi=39.0, body=0.40"
+      "confidence": 55,
+      "market_quality": 68.68492579867316,
+      "reason": "No clean alignment: Room to low blocked (0.3x < 1.0x ATR)"
     },
     "USDJPY": {
       "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 65.72907281149138,
-      "reason": "No clean alignment: trend_gap=0.02%, atr_pct=0.07%, rsi=51.1, body=0.74"
+      "confidence": 50,
+      "market_quality": 62.71864508768712,
+      "reason": "Market quality below threshold: trend_gap=0.02%, atr_pct=0.08%, rsi=54.1, body=0.62"
     },
     "AUDUSD": {
       "action": "BUY",
@@ -112,20 +112,20 @@
     "USDCAD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 51.27756032257394,
-      "reason": "Market quality below threshold: trend_gap=0.02%, atr_pct=0.05%, rsi=66.6, body=0.06"
+      "market_quality": 54.26960828053598,
+      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.05%, rsi=70.0, body=0.75"
     },
     "USDCHF": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 89.0194003181444,
-      "reason": "No clean alignment: Upper rejection wick too large (40% > 35%) | Room to high blocked (0.1x < 1.0x ATR)"
+      "market_quality": 83.33567275154996,
+      "reason": "No clean alignment: Overbought exhaustion (RSI 68.6 > 68) | Room to high blocked (0.0x < 1.0x ATR)"
     },
     "NZDUSD": {
-      "action": "BUY",
-      "confidence": 70.0,
-      "market_quality": 65.00674333474882,
-      "reason": "15m trend agrees with 1h uptrend (Room: 2.5x ATR, ADX: 21.8)"
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 66.90961831556126,
+      "reason": "No clean alignment: trend_gap=0.06%, atr_pct=0.06%, rsi=49.5, body=0.60"
     },
     "XAUUSD": {
       "action": "SELL",
@@ -136,26 +136,26 @@
     "US30": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 83.4686439067983,
-      "reason": "No clean alignment: trend_gap=0.24%, atr_pct=0.21%, rsi=38.7, body=0.20"
+      "market_quality": 83.38267064550354,
+      "reason": "No clean alignment: trend_gap=0.24%, atr_pct=0.19%, rsi=39.4, body=0.19"
     },
     "GER40": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 70.57683088378447,
-      "reason": "No clean alignment: trend_gap=0.17%, atr_pct=0.17%, rsi=45.5, body=0.08"
+      "market_quality": 68.19431040931867,
+      "reason": "No clean alignment: trend_gap=0.17%, atr_pct=0.15%, rsi=45.5, body=0.00"
     },
     "NAS100": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 61.40735700988335,
-      "reason": "Market quality below threshold: trend_gap=0.05%, atr_pct=0.26%, rsi=47.0, body=0.38"
+      "market_quality": 56.237243994062766,
+      "reason": "Market quality below threshold: trend_gap=0.04%, atr_pct=0.26%, rsi=47.9, body=0.20"
     },
     "BTCUSD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 51.53943027163067,
-      "reason": "Market quality below threshold: trend_gap=0.00%, atr_pct=0.36%, rsi=48.7, body=0.65"
+      "market_quality": 59.49073644137826,
+      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.33%, rsi=47.2, body=0.54"
     }
   },
   "recent_trades": [
@@ -274,5 +274,5 @@
     "win_rate": 90.0,
     "total_trades": 10
   },
-  "updated_at": "2026-10-23T17:18:21.744558+00:00"
+  "updated_at": "2026-10-23T17:21:43.500185+00:00"
 }

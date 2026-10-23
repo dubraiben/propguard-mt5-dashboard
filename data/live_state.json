@@ -4,7 +4,7 @@
     "server": "Deriv-Demo",
     "currency": "USD",
     "balance": 10027.71,
-    "equity": 10191.59,
+    "equity": 10189.79,
     "initial_size": 10000.0,
     "net_profit": 27.71,
     "net_profit_pct": 0.28,
@@ -21,7 +21,7 @@
     "daily_loss_limit_cash": 300.83,
     "daily_loss_buffer_remaining": 300.83,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 841.59,
+    "max_drawdown_buffer_remaining": 839.79,
     "status": "ACTIVE"
   },
   "open_positions": [
@@ -55,7 +55,7 @@
       "price_open": 52389.25,
       "sl": 52558.24,
       "tp": 52089.6,
-      "profit": 34.95,
+      "profit": 34.05,
       "comment": "PropGuard:88%"
     },
     {
@@ -66,7 +66,7 @@
       "price_open": 52391.25,
       "sl": 52558.24,
       "tp": 52089.6,
-      "profit": 35.55,
+      "profit": 34.65,
       "comment": "PropGuard #5814224289"
     },
     {
@@ -98,7 +98,7 @@
       "login": 6350807,
       "server": "Deriv-Demo",
       "balance": 10027.71,
-      "equity": 10191.59,
+      "equity": 10189.79,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
       "realized": 27.71,
@@ -135,13 +135,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 68.35929664760539,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.5x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.4x ATR)"
     },
     "USDCHF": {
-      "action": "HOLD",
-      "confidence": 55,
+      "action": "BUY",
+      "confidence": 89.4,
       "market_quality": 84.44433626278993,
-      "reason": "No clean alignment: Room to high blocked (0.1x < 1.0x ATR)"
+      "reason": "15m trend agrees with 1h uptrend (Room: -0.0x ATR, ADX: 26.6)"
     },
     "NZDUSD": {
       "action": "HOLD",
@@ -165,7 +165,7 @@
       "action": "SELL",
       "confidence": 89.9,
       "market_quality": 84.93308359500182,
-      "reason": "15m trend agrees with 1h downtrend (Room: 2.6x ATR, ADX: 19.1)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.5x ATR, ADX: 19.1)"
     },
     "NAS100": {
       "action": "HOLD",
@@ -296,5 +296,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-23T16:46:27.337905+00:00"
+  "updated_at": "2026-10-23T16:49:34.228610+00:00"
 }

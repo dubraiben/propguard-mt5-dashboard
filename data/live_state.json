@@ -1,14 +1,14 @@
 {
   "account": {
-    "login": 6350807,
+    "login": 12345678,
     "server": "Deriv-Demo",
     "currency": "USD",
-    "balance": 10128.75,
-    "equity": 10139.23,
+    "balance": 10000.0,
+    "equity": 10000.0,
     "initial_size": 10000.0,
-    "net_profit": 128.75,
-    "net_profit_pct": 1.29,
-    "today_realized_pnl": 151.04,
+    "net_profit": 0.0,
+    "net_profit_pct": 0.0,
+    "today_realized_pnl": 50.61,
     "trades_today": 6,
     "is_capital_safe": true
   },
@@ -16,148 +16,30 @@
     "phase": "PHASE1",
     "target_pct": 8.0,
     "target_cash": 800.0,
-    "current_profit": 128.75,
-    "progress_pct": 16.09,
+    "current_profit": 0.0,
+    "progress_pct": 0.0,
     "daily_loss_limit_cash": 300.83,
-    "daily_loss_buffer_remaining": 300.83,
+    "daily_loss_buffer_remaining": 273.12,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 789.23,
+    "max_drawdown_buffer_remaining": 650.0,
     "status": "ACTIVE"
   },
-  "open_positions": [
-    {
-      "ticket": 5814285655,
-      "symbol": "AUDUSD",
-      "side": "SELL",
-      "volume": 0.85,
-      "price_open": 0.70304,
-      "sl": 0.70237,
-      "tp": 0.70396,
-      "profit": 5.95,
-      "comment": "PropGuard:75%"
-    },
-    {
-      "ticket": 5814285656,
-      "symbol": "AUDUSD",
-      "side": "SELL",
-      "volume": 0.85,
-      "price_open": 0.70305,
-      "sl": 0.70237,
-      "tp": 0.70396,
-      "profit": 5.1,
-      "comment": "PropGuard #5814285655"
-    },
-    {
-      "ticket": 5814285664,
-      "symbol": "XAUUSD",
-      "side": "SELL",
-      "volume": 0.03,
-      "price_open": 3996.2,
-      "sl": 4012.62,
-      "tp": 3968.87,
-      "profit": -0.36,
-      "comment": "PropGuard:98%"
-    },
-    {
-      "ticket": 5814285709,
-      "symbol": "XAUUSD",
-      "side": "SELL",
-      "volume": 0.03,
-      "price_open": 3996.25,
-      "sl": 4012.62,
-      "tp": 3968.87,
-      "profit": -0.21,
-      "comment": "PropGuard #5814285664"
-    }
-  ],
+  "open_positions": [],
   "fleet_accounts": [
     {
       "firm": "Deriv Prop",
       "login": 6350807,
       "server": "Deriv-Demo",
-      "balance": 10128.75,
-      "equity": 10139.23,
+      "balance": 10153.75,
+      "equity": 10087.63,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
-      "realized": 128.75,
-      "fee": 25.75,
+      "realized": 153.75,
+      "fee": 35.75,
       "status": "ACTIVE"
     }
   ],
-  "signals": {
-    "EURUSD": {
-      "action": "SELL",
-      "confidence": 78.9,
-      "market_quality": 73.8574494902226,
-      "reason": "15m trend agrees with 1h downtrend (Room: 0.2x ATR, ADX: 14.7)"
-    },
-    "GBPUSD": {
-      "action": "SELL",
-      "confidence": 73.7,
-      "market_quality": 68.68492579867316,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.0x ATR, ADX: 13.0)"
-    },
-    "USDJPY": {
-      "action": "HOLD",
-      "confidence": 50,
-      "market_quality": 62.71864508768712,
-      "reason": "Market quality below threshold: trend_gap=0.02%, atr_pct=0.08%, rsi=54.1, body=0.62"
-    },
-    "AUDUSD": {
-      "action": "BUY",
-      "confidence": 75.0,
-      "market_quality": 70.04166859783525,
-      "reason": "15m trend agrees with 1h uptrend (Room: 1.6x ATR, ADX: 29.2)"
-    },
-    "USDCAD": {
-      "action": "HOLD",
-      "confidence": 50,
-      "market_quality": 54.26960828053598,
-      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.05%, rsi=70.0, body=0.75"
-    },
-    "USDCHF": {
-      "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 83.33567275154996,
-      "reason": "No clean alignment: Overbought exhaustion (RSI 68.6 > 68) | Room to high blocked (0.3x < 1.0x ATR)"
-    },
-    "NZDUSD": {
-      "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 66.90961831556126,
-      "reason": "No clean alignment: trend_gap=0.06%, atr_pct=0.06%, rsi=49.5, body=0.60"
-    },
-    "XAUUSD": {
-      "action": "SELL",
-      "confidence": 98.0,
-      "market_quality": 92.98521577665431,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.9x ATR, ADX: 36.3)"
-    },
-    "US30": {
-      "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 83.38267064550354,
-      "reason": "No clean alignment: trend_gap=0.24%, atr_pct=0.19%, rsi=39.4, body=0.19"
-    },
-    "GER40": {
-      "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 68.19431040931867,
-      "reason": "No clean alignment: trend_gap=0.17%, atr_pct=0.15%, rsi=45.5, body=0.00"
-    },
-    "NAS100": {
-      "action": "HOLD",
-      "confidence": 50,
-      "market_quality": 56.237243994062766,
-      "reason": "Market quality below threshold: trend_gap=0.04%, atr_pct=0.26%, rsi=47.9, body=0.20"
-    },
-    "BTCUSD": {
-      "action": "HOLD",
-      "confidence": 50,
-      "market_quality": 59.49073644137826,
-      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.33%, rsi=47.2, body=0.54"
-    }
-  },
+  "signals": {},
   "recent_trades": [
     {
       "ticket": 5814285660,
@@ -274,5 +156,5 @@
     "win_rate": 90.0,
     "total_trades": 10
   },
-  "updated_at": "2026-10-23T17:24:54.911347+00:00"
+  "updated_at": "2026-10-23T17:39:24.953496+00:00"
 }

@@ -37,6 +37,18 @@
       "realized": 128.75,
       "fee": 25.75,
       "status": "ACTIVE"
+    },
+    {
+      "firm": "Exness Pro",
+      "login": 477624379,
+      "server": "Exness-MT5Trial9",
+      "balance": 1000.0,
+      "equity": 1000.0,
+      "riskPct": 0.5,
+      "dailyBuf": 30.0,
+      "realized": 0.0,
+      "fee": 0.0,
+      "status": "ACTIVE"
     }
   ],
   "signals": {

@@ -3,12 +3,12 @@
     "login": 6350807,
     "server": "Deriv-Demo",
     "currency": "USD",
-    "balance": 10101.81,
-    "equity": 10198.35,
+    "balance": 10178.75,
+    "equity": 10178.75,
     "initial_size": 10000.0,
-    "net_profit": 101.81,
-    "net_profit_pct": 1.02,
-    "today_realized_pnl": 36.75,
+    "net_profit": 178.75,
+    "net_profit_pct": 1.79,
+    "today_realized_pnl": 75.61,
     "trades_today": 3,
     "is_capital_safe": true
   },
@@ -16,71 +16,26 @@
     "phase": "PHASE1",
     "target_pct": 8.0,
     "target_cash": 800.0,
-    "current_profit": 101.81,
-    "progress_pct": 12.73,
+    "current_profit": 178.75,
+    "progress_pct": 22.34,
     "daily_loss_limit_cash": 300.83,
     "daily_loss_buffer_remaining": 300.83,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 848.35,
+    "max_drawdown_buffer_remaining": 828.75,
     "status": "ACTIVE"
   },
-  "open_positions": [
-    {
-      "ticket": 5814223467,
-      "symbol": "Germany 40",
-      "side": "SELL",
-      "volume": 0.7,
-      "price_open": 25171.1,
-      "sl": 25241.74,
-      "tp": 25054.31,
-      "profit": 22.96,
-      "comment": "PropGuard:98%"
-    },
-    {
-      "ticket": 5814223487,
-      "symbol": "Germany 40",
-      "side": "SELL",
-      "volume": 0.7,
-      "price_open": 25171.1,
-      "sl": 25241.74,
-      "tp": 25054.31,
-      "profit": 22.96,
-      "comment": "PropGuard #5814223467"
-    },
-    {
-      "ticket": 5814224309,
-      "symbol": "Germany 40",
-      "side": "SELL",
-      "volume": 0.7,
-      "price_open": 25174.1,
-      "sl": 25244.74,
-      "tp": 25057.31,
-      "profit": 25.31,
-      "comment": "PropGuard:98%"
-    },
-    {
-      "ticket": 5814224314,
-      "symbol": "Germany 40",
-      "side": "SELL",
-      "volume": 0.7,
-      "price_open": 25174.1,
-      "sl": 25244.74,
-      "tp": 25057.31,
-      "profit": 25.31,
-      "comment": "PropGuard #5814224309"
-    }
-  ],
+  "open_positions": [],
   "fleet_accounts": [
     {
       "firm": "Deriv Prop",
       "login": 6350807,
       "server": "Deriv-Demo",
-      "balance": 10101.81,
-      "equity": 10198.35,
+      "balance": 10178.75,
+      "equity": 10178.75,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
-      "realized": 101.81,
-      "fee": 20.36,
+      "realized": 178.75,
+      "fee": 35.75,
       "status": "ACTIVE"
     }
   ],
@@ -95,7 +50,7 @@
       "action": "SELL",
       "confidence": 79.4,
       "market_quality": 74.37151300853074,
-      "reason": "15m trend agrees with 1h downtrend (Room: -0.3x ATR, ADX: 11.9)"
+      "reason": "15m trend agrees with 1h downtrend (Room: -0.4x ATR, ADX: 11.9)"
     },
     "USDJPY": {
       "action": "HOLD",
@@ -113,7 +68,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 67.83127509591891,
-      "reason": "No clean alignment: Overextended from 20 EMA (2.2x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 2.3x ATR)"
+      "reason": "No clean alignment: Overextended from 20 EMA (2.2x ATR > 2.0x) | Awaiting 20 EMA pullback or breakdown (dist 2.4x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
@@ -131,19 +86,19 @@
       "action": "SELL",
       "confidence": 97.4,
       "market_quality": 92.37241311297953,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.7x ATR, ADX: 35.5)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.6x ATR, ADX: 35.5)"
     },
     "US30": {
       "action": "SELL",
       "confidence": 98.0,
       "market_quality": 95.67040957100414,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.7x ATR, ADX: 34.1)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.9x ATR, ADX: 34.1)"
     },
     "GER40": {
       "action": "SELL",
-      "confidence": 82.3,
+      "confidence": 92.3,
       "market_quality": 77.33380487371606,
-      "reason": "15m trend agrees with 1h downtrend (Room: 2.6x ATR, ADX: 18.3)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.9x ATR, ADX: 18.3) | \ud83e\udde0 A+ Setup Synergy: Pattern 'GER40:SELL:weak_<0.25%:neutral_45-55' has 100% win rate (2/2)"
     },
     "NAS100": {
       "action": "HOLD",
@@ -159,6 +114,42 @@
     }
   },
   "recent_trades": [
+    {
+      "ticket": 5814223467,
+      "symbol": "GER40",
+      "side": "SELL",
+      "volume": 0.7,
+      "entry_price": 50.0,
+      "exit_price": 25150.8,
+      "sl": 25241.73571,
+      "tp": 25054.30714,
+      "pnl": 15.9,
+      "outcome": "WIN",
+      "open_time": "2026-10-23T15:53:54.869613+00:00",
+      "close_time": "2026-10-23T16:54:29.754093+00:00",
+      "features_json": "{\"symbol\": \"GER40\", \"side\": \"SELL\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"conviction_>0.65\", \"session\": \"london_ny\", \"hour\": 15, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.69, \"timestamp\": \"2026-10-23T15:53:54.869613+00:00\"}",
+      "ai_autopsy": "The short trade succeeded",
+      "lesson_learned": "The short trade succeeded",
+      "created_at": "2026-10-23 16:54:29"
+    },
+    {
+      "ticket": 5814224309,
+      "symbol": "GER40",
+      "side": "SELL",
+      "volume": 0.7,
+      "entry_price": 50.0,
+      "exit_price": 25144.8,
+      "sl": 25244.73571,
+      "tp": 25057.30714,
+      "pnl": 22.96,
+      "outcome": "WIN",
+      "open_time": "2026-10-23T15:54:59.950643+00:00",
+      "close_time": "2026-10-23T16:53:20.683122+00:00",
+      "features_json": "{\"symbol\": \"GER40\", \"side\": \"SELL\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"moderate_0.35-0.65\", \"session\": \"london_ny\", \"hour\": 15, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.46, \"timestamp\": \"2026-10-23T15:54:59.950643+00:00\"}",
+      "ai_autopsy": "The trade successfully capitalized on a clean",
+      "lesson_learned": "The trade successfully capitalized on a clean",
+      "created_at": "2026-10-23 16:53:20"
+    },
     {
       "ticket": 5814224289,
       "symbol": "US30",
@@ -230,49 +221,13 @@
       "ai_autopsy": "Constraints: Exactly 2 clear, powerful",
       "lesson_learned": "Constraints: Exactly 2 clear, powerful",
       "created_at": "2026-10-22 09:06:47"
-    },
-    {
-      "ticket": 5812626058,
-      "symbol": "XAUUSD",
-      "side": "SELL",
-      "volume": 0.04,
-      "entry_price": 50.0,
-      "exit_price": 10024.15,
-      "sl": 4104.5682,
-      "tp": 4069.9596,
-      "pnl": 10.0,
-      "outcome": "WIN",
-      "open_time": "2026-10-22T07:41:47.031128+00:00",
-      "close_time": "2026-10-22T07:44:44.604397+00:00",
-      "features_json": "{\"symbol\": \"XAUUSD\", \"side\": \"SELL\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"indecision_<0.35\", \"session\": \"london_ny\", \"hour\": 7, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.3, \"timestamp\": \"2026-10-22T07:41:47.031128+00:00\"}",
-      "ai_autopsy": "Quantitative summary: WIN on XAUUSD SELL (PnL: $10.00). Metrics logged.",
-      "lesson_learned": "Quantitative summary: WIN on XAUUSD SELL (PnL: $10.00). Metrics logged.",
-      "created_at": "2026-10-22 07:44:44"
-    },
-    {
-      "ticket": 5811792393,
-      "symbol": "NAS100",
-      "side": "BUY",
-      "volume": 0.7,
-      "entry_price": 50.0,
-      "exit_price": 10010.81,
-      "sl": 29635.93714,
-      "tp": 29827.17143,
-      "pnl": 10.0,
-      "outcome": "WIN",
-      "open_time": "2026-10-21T12:31:37.756248+00:00",
-      "close_time": "2026-10-21T12:39:28.992729+00:00",
-      "features_json": "{\"symbol\": \"NAS100\", \"side\": \"BUY\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"conviction_>0.65\", \"session\": \"london_ny\", \"hour\": 12, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.93, \"timestamp\": \"2026-10-21T12:31:37.756248+00:00\"}",
-      "ai_autopsy": "Quantitative summary: WIN on NAS100 BUY (PnL: $10.00). Metrics logged.",
-      "lesson_learned": "Quantitative summary: WIN on NAS100 BUY (PnL: $10.00). Metrics logged.",
-      "created_at": "2026-10-21 12:39:29"
     }
   ],
   "intelligence": {
-    "wins": 7,
+    "wins": 9,
     "losses": 0,
     "win_rate": 100.0,
-    "total_trades": 7
+    "total_trades": 9
   },
-  "updated_at": "2026-10-23T16:52:44.405516+00:00"
+  "updated_at": "2026-10-23T16:56:01.307720+00:00"
 }

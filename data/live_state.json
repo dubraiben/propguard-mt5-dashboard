@@ -39,7 +39,80 @@
       "status": "ACTIVE"
     }
   ],
-  "signals": {},
+  "signals": {
+    "EURUSD": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 50.56665151242599,
+      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.08%, rsi=37.7, body=0.06"
+    },
+    "GBPUSD": {
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 81.56250000000347,
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.2x ATR)"
+    },
+    "USDJPY": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 49.48466616229793,
+      "reason": "Market quality below threshold: trend_gap=0.02%, atr_pct=0.06%, rsi=33.3, body=0.06"
+    },
+    "AUDUSD": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 48.70345054333346,
+      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.08%, rsi=44.2, body=0.06"
+    },
+    "USDCAD": {
+      "action": "HOLD",
+      "confidence": 55,
+      "market_quality": 73.4419364824536,
+      "reason": "No clean alignment: trend_gap=0.10%, atr_pct=0.08%, rsi=45.5, body=0.06"
+    },
+    "USDCHF": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 62.2916564661362,
+      "reason": "Market quality below threshold: trend_gap=0.06%, atr_pct=0.09%, rsi=54.5, body=0.06"
+    },
+    "NZDUSD": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 57.61573805210613,
+      "reason": "Market quality below threshold: trend_gap=0.04%, atr_pct=0.08%, rsi=47.2, body=0.06"
+    },
+    "XAUUSD": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 39.26752608887903,
+      "reason": "Market quality below threshold: trend_gap=0.03%, atr_pct=0.06%, rsi=68.6, body=0.06"
+    },
+    "US30": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 63.69972259885388,
+      "reason": "Market quality below threshold: trend_gap=0.12%, atr_pct=0.06%, rsi=36.6, body=0.06"
+    },
+    "GER40": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 52.273016872505714,
+      "reason": "Market quality below threshold: trend_gap=0.04%, atr_pct=0.08%, rsi=51.1, body=0.06"
+    },
+    "NAS100": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 59.90764263096716,
+      "reason": "Market quality below threshold: trend_gap=0.10%, atr_pct=0.09%, rsi=63.6, body=0.06"
+    },
+    "BTCUSD": {
+      "action": "HOLD",
+      "confidence": 50,
+      "market_quality": 61.00748480619512,
+      "reason": "Market quality below threshold: trend_gap=0.16%, atr_pct=0.11%, rsi=42.6, body=0.06"
+    }
+  },
   "recent_trades": [
     {
       "ticket": 5814285660,
@@ -156,5 +229,5 @@
     "win_rate": 90.0,
     "total_trades": 10
   },
-  "updated_at": "2026-10-23T17:39:24.953496+00:00"
+  "updated_at": "2026-10-23T17:40:56.914664+00:00"
 }

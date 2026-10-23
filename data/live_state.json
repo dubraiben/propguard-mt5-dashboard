@@ -4,12 +4,12 @@
     "server": "Deriv-Demo",
     "currency": "USD",
     "balance": 10027.71,
-    "equity": 10027.71,
+    "equity": 10021.11,
     "initial_size": 10000.0,
     "net_profit": 27.71,
     "net_profit_pct": 0.28,
     "today_realized_pnl": 0.0,
-    "trades_today": 0,
+    "trades_today": 1,
     "is_capital_safe": true
   },
   "prop_firm": {
@@ -19,19 +19,42 @@
     "current_profit": 27.71,
     "progress_pct": 3.46,
     "daily_loss_limit_cash": 300.83,
-    "daily_loss_buffer_remaining": 300.83,
+    "daily_loss_buffer_remaining": 294.23,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 677.71,
+    "max_drawdown_buffer_remaining": 671.11,
     "status": "ACTIVE"
   },
-  "open_positions": [],
+  "open_positions": [
+    {
+      "ticket": 5814223467,
+      "symbol": "Germany 40",
+      "side": "SELL",
+      "volume": 0.7,
+      "price_open": 25171.1,
+      "sl": 25241.74,
+      "tp": 25054.31,
+      "profit": -3.3,
+      "comment": "PropGuard:98%"
+    },
+    {
+      "ticket": 5814223487,
+      "symbol": "Germany 40",
+      "side": "SELL",
+      "volume": 0.7,
+      "price_open": 25171.1,
+      "sl": 25241.74,
+      "tp": 25054.31,
+      "profit": -3.3,
+      "comment": "PropGuard #5814223467"
+    }
+  ],
   "fleet_accounts": [
     {
       "firm": "Deriv Prop",
       "login": 6350807,
       "server": "Deriv-Demo",
       "balance": 10027.71,
-      "equity": 10027.71,
+      "equity": 10021.11,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
       "realized": 27.71,
@@ -156,5 +179,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-23T15:53:30.262840+00:00"
+  "updated_at": "2026-10-23T15:54:55.990318+00:00"
 }

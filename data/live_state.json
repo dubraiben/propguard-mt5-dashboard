@@ -4,7 +4,7 @@
     "server": "Deriv-Demo",
     "currency": "USD",
     "balance": 10027.71,
-    "equity": 10021.55,
+    "equity": 10038.03,
     "initial_size": 10000.0,
     "net_profit": 27.71,
     "net_profit_pct": 0.28,
@@ -19,9 +19,9 @@
     "current_profit": 27.71,
     "progress_pct": 3.46,
     "daily_loss_limit_cash": 300.83,
-    "daily_loss_buffer_remaining": 294.67,
+    "daily_loss_buffer_remaining": 300.83,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 671.55,
+    "max_drawdown_buffer_remaining": 688.03,
     "status": "ACTIVE"
   },
   "open_positions": [
@@ -33,7 +33,7 @@
       "price_open": 25171.1,
       "sl": 25241.74,
       "tp": 25054.31,
-      "profit": -5.64,
+      "profit": -4.07,
       "comment": "PropGuard:98%"
     },
     {
@@ -44,7 +44,7 @@
       "price_open": 25171.1,
       "sl": 25241.74,
       "tp": 25054.31,
-      "profit": -5.64,
+      "profit": -4.07,
       "comment": "PropGuard #5814223467"
     },
     {
@@ -55,7 +55,7 @@
       "price_open": 52389.25,
       "sl": 52558.24,
       "tp": 52089.6,
-      "profit": 5.55,
+      "profit": 10.65,
       "comment": "PropGuard:88%"
     },
     {
@@ -66,7 +66,7 @@
       "price_open": 52391.25,
       "sl": 52558.24,
       "tp": 52089.6,
-      "profit": 6.15,
+      "profit": 11.25,
       "comment": "PropGuard #5814224289"
     },
     {
@@ -77,7 +77,7 @@
       "price_open": 25174.1,
       "sl": 25244.74,
       "tp": 25057.31,
-      "profit": -3.29,
+      "profit": -1.72,
       "comment": "PropGuard:98%"
     },
     {
@@ -88,7 +88,7 @@
       "price_open": 25174.1,
       "sl": 25244.74,
       "tp": 25057.31,
-      "profit": -3.29,
+      "profit": -1.72,
       "comment": "PropGuard #5814224309"
     }
   ],
@@ -98,7 +98,7 @@
       "login": 6350807,
       "server": "Deriv-Demo",
       "balance": 10027.71,
-      "equity": 10021.55,
+      "equity": 10038.03,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
       "realized": 27.71,
@@ -117,7 +117,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 67.05696944023711,
-      "reason": "No clean alignment: trend_gap=0.03%, atr_pct=0.06%, rsi=47.1, body=0.57"
+      "reason": "No clean alignment: Room to low blocked (0.9x < 1.0x ATR)"
     },
     "USDJPY": {
       "action": "HOLD",
@@ -126,10 +126,10 @@
       "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.09%, rsi=56.7, body=0.66"
     },
     "AUDUSD": {
-      "action": "HOLD",
-      "confidence": 55,
+      "action": "BUY",
+      "confidence": 84.0,
       "market_quality": 79.03603935648695,
-      "reason": "No clean alignment: Room to high blocked (0.8x < 1.0x ATR)"
+      "reason": "15m trend agrees with 1h uptrend (Room: 1.0x ATR, ADX: 32.7)"
     },
     "USDCAD": {
       "action": "HOLD",
@@ -141,13 +141,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 75.78640882907773,
-      "reason": "No clean alignment: Upper rejection wick too large (67% > 35%) | Room to high blocked (0.7x < 1.0x ATR)"
+      "reason": "No clean alignment: Upper rejection wick too large (67% > 35%) | Room to high blocked (0.5x < 1.0x ATR)"
     },
     "NZDUSD": {
       "action": "BUY",
       "confidence": 79.6,
       "market_quality": 74.56927614125809,
-      "reason": "15m trend agrees with 1h uptrend (Room: 1.1x ATR, ADX: 25.5)"
+      "reason": "15m trend agrees with 1h uptrend (Room: 1.3x ATR, ADX: 25.5)"
     },
     "XAUUSD": {
       "action": "HOLD",
@@ -296,5 +296,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-23T16:27:00.560246+00:00"
+  "updated_at": "2026-10-23T16:30:09.542094+00:00"
 }

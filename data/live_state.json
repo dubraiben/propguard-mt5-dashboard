@@ -4,7 +4,7 @@
     "server": "Deriv-Demo",
     "currency": "USD",
     "balance": 10027.71,
-    "equity": 10052.63,
+    "equity": 9978.95,
     "initial_size": 10000.0,
     "net_profit": 27.71,
     "net_profit_pct": 0.28,
@@ -19,9 +19,9 @@
     "current_profit": 27.71,
     "progress_pct": 3.46,
     "daily_loss_limit_cash": 300.83,
-    "daily_loss_buffer_remaining": 300.83,
+    "daily_loss_buffer_remaining": 252.07,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 702.63,
+    "max_drawdown_buffer_remaining": 628.95,
     "status": "ACTIVE"
   },
   "open_positions": [
@@ -33,7 +33,7 @@
       "price_open": 25171.1,
       "sl": 25241.74,
       "tp": 25054.31,
-      "profit": 0.63,
+      "profit": -12.69,
       "comment": "PropGuard:98%"
     },
     {
@@ -44,7 +44,7 @@
       "price_open": 25171.1,
       "sl": 25241.74,
       "tp": 25054.31,
-      "profit": 0.63,
+      "profit": -12.69,
       "comment": "PropGuard #5814223467"
     },
     {
@@ -55,7 +55,7 @@
       "price_open": 52389.25,
       "sl": 52558.24,
       "tp": 52089.6,
-      "profit": 8.55,
+      "profit": -1.65,
       "comment": "PropGuard:88%"
     },
     {
@@ -66,7 +66,7 @@
       "price_open": 52391.25,
       "sl": 52558.24,
       "tp": 52089.6,
-      "profit": 9.15,
+      "profit": -1.05,
       "comment": "PropGuard #5814224289"
     },
     {
@@ -77,7 +77,7 @@
       "price_open": 25174.1,
       "sl": 25244.74,
       "tp": 25057.31,
-      "profit": 2.98,
+      "profit": -10.34,
       "comment": "PropGuard:98%"
     },
     {
@@ -88,7 +88,7 @@
       "price_open": 25174.1,
       "sl": 25244.74,
       "tp": 25057.31,
-      "profit": 2.98,
+      "profit": -10.34,
       "comment": "PropGuard #5814224309"
     }
   ],
@@ -98,7 +98,7 @@
       "login": 6350807,
       "server": "Deriv-Demo",
       "balance": 10027.71,
-      "equity": 10052.63,
+      "equity": 9978.95,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
       "realized": 27.71,
@@ -111,7 +111,7 @@
       "action": "SELL",
       "confidence": 73.6,
       "market_quality": 68.60760668156556,
-      "reason": "15m trend agrees with 1h downtrend (Room: 0.9x ATR, ADX: 20.0)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.0x ATR, ADX: 20.0)"
     },
     "GBPUSD": {
       "action": "HOLD",
@@ -123,7 +123,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 65.77306120607275,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.8x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.5x ATR)"
     },
     "AUDUSD": {
       "action": "HOLD",
@@ -135,7 +135,7 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 77.29898390521518,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.6x ATR)"
+      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 1.4x ATR)"
     },
     "USDCHF": {
       "action": "HOLD",
@@ -159,7 +159,7 @@
       "action": "SELL",
       "confidence": 94.1,
       "market_quality": 89.12337875591703,
-      "reason": "15m trend agrees with 1h downtrend (Room: 2.3x ATR, ADX: 35.8)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 2.7x ATR, ADX: 35.8)"
     },
     "GER40": {
       "action": "HOLD",
@@ -296,5 +296,5 @@
     "win_rate": 100.0,
     "total_trades": 6
   },
-  "updated_at": "2026-10-23T16:07:40.590338+00:00"
+  "updated_at": "2026-10-23T16:10:52.444024+00:00"
 }

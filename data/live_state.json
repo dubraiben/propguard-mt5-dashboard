@@ -1,13 +1,13 @@
 {
   "account": {
-    "login": 12345678,
+    "login": 6350807,
     "server": "Deriv-Demo",
     "currency": "USD",
-    "balance": 10000.0,
-    "equity": 10000.0,
+    "balance": 10128.75,
+    "equity": 10128.75,
     "initial_size": 10000.0,
-    "net_profit": 0.0,
-    "net_profit_pct": 0.0,
+    "net_profit": 128.75,
+    "net_profit_pct": 1.29,
     "today_realized_pnl": 50.61,
     "trades_today": 6,
     "is_capital_safe": true
@@ -16,12 +16,12 @@
     "phase": "PHASE1",
     "target_pct": 8.0,
     "target_cash": 800.0,
-    "current_profit": 0.0,
-    "progress_pct": 0.0,
-    "daily_loss_limit_cash": 300.83,
-    "daily_loss_buffer_remaining": 273.12,
+    "current_profit": 128.75,
+    "progress_pct": 16.09,
+    "daily_loss_limit_cash": 303.86,
+    "daily_loss_buffer_remaining": 303.86,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 650.0,
+    "max_drawdown_buffer_remaining": 778.75,
     "status": "ACTIVE"
   },
   "open_positions": [],
@@ -30,12 +30,12 @@
       "firm": "Deriv Prop",
       "login": 6350807,
       "server": "Deriv-Demo",
-      "balance": 10153.75,
-      "equity": 10087.63,
+      "balance": 10128.75,
+      "equity": 10128.75,
       "riskPct": 0.5,
-      "dailyBuf": 300.0,
-      "realized": 153.75,
-      "fee": 35.75,
+      "dailyBuf": 303.86,
+      "realized": 128.75,
+      "fee": 25.75,
       "status": "ACTIVE"
     }
   ],
@@ -43,77 +43,77 @@
     "EURUSD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 50.56665151242599,
-      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.08%, rsi=37.7, body=0.06"
+      "market_quality": 50.5,
+      "reason": "Market quality below threshold: awaiting setup"
     },
     "GBPUSD": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 81.56250000000347,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 2.2x ATR)"
+      "market_quality": 81.6,
+      "reason": "Awaiting 20 EMA pullback or breakdown"
     },
     "USDJPY": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 49.48466616229793,
-      "reason": "Market quality below threshold: trend_gap=0.02%, atr_pct=0.06%, rsi=33.3, body=0.06"
+      "market_quality": 49.5,
+      "reason": "Market quality below threshold: rsi=33.3"
     },
     "AUDUSD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 48.70345054333346,
-      "reason": "Market quality below threshold: trend_gap=0.01%, atr_pct=0.08%, rsi=44.2, body=0.06"
+      "market_quality": 48.7,
+      "reason": "Market quality below threshold: rsi=44.2"
     },
     "USDCAD": {
       "action": "HOLD",
       "confidence": 55,
-      "market_quality": 73.4419364824536,
-      "reason": "No clean alignment: trend_gap=0.10%, atr_pct=0.08%, rsi=45.5, body=0.06"
+      "market_quality": 73.4,
+      "reason": "No clean alignment: trend_gap=0.10%"
     },
     "USDCHF": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 62.2916564661362,
-      "reason": "Market quality below threshold: trend_gap=0.06%, atr_pct=0.09%, rsi=54.5, body=0.06"
+      "market_quality": 62.3,
+      "reason": "Market quality below threshold: rsi=54.5"
     },
     "NZDUSD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 57.61573805210613,
-      "reason": "Market quality below threshold: trend_gap=0.04%, atr_pct=0.08%, rsi=47.2, body=0.06"
+      "market_quality": 57.6,
+      "reason": "Market quality below threshold: rsi=47.2"
     },
     "XAUUSD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 39.26752608887903,
-      "reason": "Market quality below threshold: trend_gap=0.03%, atr_pct=0.06%, rsi=68.6, body=0.06"
+      "market_quality": 39.3,
+      "reason": "Market quality below threshold: rsi=68.6"
     },
     "US30": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 63.69972259885388,
-      "reason": "Market quality below threshold: trend_gap=0.12%, atr_pct=0.06%, rsi=36.6, body=0.06"
+      "market_quality": 63.7,
+      "reason": "Market quality below threshold: rsi=36.6"
     },
     "GER40": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 52.273016872505714,
-      "reason": "Market quality below threshold: trend_gap=0.04%, atr_pct=0.08%, rsi=51.1, body=0.06"
+      "market_quality": 52.3,
+      "reason": "Market quality below threshold: rsi=51.1"
     },
     "NAS100": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 59.90764263096716,
-      "reason": "Market quality below threshold: trend_gap=0.10%, atr_pct=0.09%, rsi=63.6, body=0.06"
+      "market_quality": 59.9,
+      "reason": "Market quality below threshold: rsi=63.6"
     },
     "BTCUSD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 61.00748480619512,
-      "reason": "Market quality below threshold: trend_gap=0.16%, atr_pct=0.11%, rsi=42.6, body=0.06"
+      "market_quality": 61.0,
+      "reason": "Market quality below threshold: rsi=42.6"
     }
   },
-  "recent_trades": [
+  "history_trades": [
     {
       "ticket": 5814285660,
       "symbol": "NZDUSD",
@@ -131,24 +131,6 @@
       "ai_autopsy": "The trade failed mechanically because initiating a long",
       "lesson_learned": "The trade failed mechanically because initiating a long",
       "created_at": "2026-10-23 17:11:56"
-    },
-    {
-      "ticket": 5814223467,
-      "symbol": "GER40",
-      "side": "SELL",
-      "volume": 0.7,
-      "entry_price": 50.0,
-      "exit_price": 25150.8,
-      "sl": 25241.73571,
-      "tp": 25054.30714,
-      "pnl": 15.9,
-      "outcome": "WIN",
-      "open_time": "2026-10-23T15:53:54.869613+00:00",
-      "close_time": "2026-10-23T16:54:29.754093+00:00",
-      "features_json": "{\"symbol\": \"GER40\", \"side\": \"SELL\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"conviction_>0.65\", \"session\": \"london_ny\", \"hour\": 15, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.69, \"timestamp\": \"2026-10-23T15:53:54.869613+00:00\"}",
-      "ai_autopsy": "The short trade succeeded",
-      "lesson_learned": "The short trade succeeded",
-      "created_at": "2026-10-23 16:54:29"
     },
     {
       "ticket": 5814224309,
@@ -187,6 +169,24 @@
       "created_at": "2026-10-23 16:52:22"
     },
     {
+      "ticket": 5814223467,
+      "symbol": "GER40",
+      "side": "SELL",
+      "volume": 0.7,
+      "entry_price": 50.0,
+      "exit_price": 25150.8,
+      "sl": 25241.73571,
+      "tp": 25054.30714,
+      "pnl": 15.9,
+      "outcome": "WIN",
+      "open_time": "2026-10-23T15:53:54.869613+00:00",
+      "close_time": "2026-10-23T16:54:29.754093+00:00",
+      "features_json": "{\"symbol\": \"GER40\", \"side\": \"SELL\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"conviction_>0.65\", \"session\": \"london_ny\", \"hour\": 15, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.69, \"timestamp\": \"2026-10-23T15:53:54.869613+00:00\"}",
+      "ai_autopsy": "The short trade succeeded",
+      "lesson_learned": "The short trade succeeded",
+      "created_at": "2026-10-23 16:54:29"
+    },
+    {
       "ticket": 5812795440,
       "symbol": "XAUUSD",
       "side": "SELL",
@@ -221,6 +221,78 @@
       "ai_autopsy": "This short-term sell order capitalized on a classic liquidity sweep as price spiked into neutral resistance during the London-NY crossover, instantly reversing due to weak trend momentum and low body conviction. The execution algorithm must remember that selling indecision candles within tight consolidation zones offers high-probability mean reversion when volatility is normal.",
       "lesson_learned": "This short-term sell order capitalized on a classic liquidity sweep as price spiked into neutral resistance during the London-NY crossover, instantly reversing due to weak trend momentum and low body conviction. The execution algorithm must remember that selling indecision candles within tight consolidation zones offers high-probability mean reversion when volatility is normal.",
       "created_at": "2026-10-22 10:20:32"
+    },
+    {
+      "ticket": 5812693684,
+      "symbol": "USDCHF",
+      "side": "SELL",
+      "volume": 0.3,
+      "entry_price": 50.0,
+      "exit_price": 10050.99,
+      "sl": 0.82141,
+      "tp": 0.8177,
+      "pnl": 10.0,
+      "outcome": "WIN",
+      "open_time": "2026-10-22T08:57:58.675298+00:00",
+      "close_time": "2026-10-22T09:06:47.288863+00:00",
+      "features_json": "{\"symbol\": \"USDCHF\", \"side\": \"SELL\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"indecision_<0.35\", \"session\": \"london_ny\", \"hour\": 8, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.22, \"timestamp\": \"2026-10-22T08:57:58.675298+00:00\"}",
+      "ai_autopsy": "Constraints: Exactly 2 clear, powerful",
+      "lesson_learned": "Constraints: Exactly 2 clear, powerful",
+      "created_at": "2026-10-22 09:06:47"
+    },
+    {
+      "ticket": 5812626058,
+      "symbol": "XAUUSD",
+      "side": "SELL",
+      "volume": 0.04,
+      "entry_price": 50.0,
+      "exit_price": 10024.15,
+      "sl": 4104.5682,
+      "tp": 4069.9596,
+      "pnl": 10.0,
+      "outcome": "WIN",
+      "open_time": "2026-10-22T07:41:47.031128+00:00",
+      "close_time": "2026-10-22T07:44:44.604397+00:00",
+      "features_json": "{\"symbol\": \"XAUUSD\", \"side\": \"SELL\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"indecision_<0.35\", \"session\": \"london_ny\", \"hour\": 7, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.3, \"timestamp\": \"2026-10-22T07:41:47.031128+00:00\"}",
+      "ai_autopsy": "Quantitative summary: WIN on XAUUSD SELL (PnL: $10.00). Metrics logged.",
+      "lesson_learned": "Quantitative summary: WIN on XAUUSD SELL (PnL: $10.00). Metrics logged.",
+      "created_at": "2026-10-22 07:44:44"
+    },
+    {
+      "ticket": 5811792400,
+      "symbol": "BTCUSD",
+      "side": "BUY",
+      "volume": 0.2,
+      "entry_price": 50.0,
+      "exit_price": 10006.19,
+      "sl": 83217.97286,
+      "tp": 83868.84257,
+      "pnl": 10.0,
+      "outcome": "WIN",
+      "open_time": "2026-10-21T12:31:38.675680+00:00",
+      "close_time": "2026-10-21T12:34:55.146208+00:00",
+      "features_json": "{\"symbol\": \"BTCUSD\", \"side\": \"BUY\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"conviction_>0.65\", \"session\": \"london_ny\", \"hour\": 12, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.98, \"timestamp\": \"2026-10-21T12:31:38.675680+00:00\"}",
+      "ai_autopsy": "Quantitative summary: WIN on BTCUSD BUY (PnL: $10.00). Metrics logged.",
+      "lesson_learned": "Quantitative summary: WIN on BTCUSD BUY (PnL: $10.00). Metrics logged.",
+      "created_at": "2026-10-21 12:34:55"
+    },
+    {
+      "ticket": 5811792393,
+      "symbol": "NAS100",
+      "side": "BUY",
+      "volume": 0.7,
+      "entry_price": 50.0,
+      "exit_price": 10010.81,
+      "sl": 29635.93714,
+      "tp": 29827.17143,
+      "pnl": 10.0,
+      "outcome": "WIN",
+      "open_time": "2026-10-21T12:31:37.756248+00:00",
+      "close_time": "2026-10-21T12:39:28.992729+00:00",
+      "features_json": "{\"symbol\": \"NAS100\", \"side\": \"BUY\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"conviction_>0.65\", \"session\": \"london_ny\", \"hour\": 12, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.93, \"timestamp\": \"2026-10-21T12:31:37.756248+00:00\"}",
+      "ai_autopsy": "Quantitative summary: WIN on NAS100 BUY (PnL: $10.00). Metrics logged.",
+      "lesson_learned": "Quantitative summary: WIN on NAS100 BUY (PnL: $10.00). Metrics logged.",
+      "created_at": "2026-10-21 12:39:29"
     }
   ],
   "intelligence": {
@@ -229,5 +301,5 @@
     "win_rate": 90.0,
     "total_trades": 10
   },
-  "updated_at": "2026-10-23T18:00:04.869811+00:00"
+  "updated_at": "2026-10-23T18:02:09.884034+00:00"
 }

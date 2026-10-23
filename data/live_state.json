@@ -3,39 +3,84 @@
     "login": 6350807,
     "server": "Deriv-Demo",
     "currency": "USD",
-    "balance": 10178.75,
-    "equity": 10178.75,
+    "balance": 10128.75,
+    "equity": 10111.43,
     "initial_size": 10000.0,
-    "net_profit": 178.75,
-    "net_profit_pct": 1.79,
-    "today_realized_pnl": 75.61,
-    "trades_today": 3,
+    "net_profit": 128.75,
+    "net_profit_pct": 1.29,
+    "today_realized_pnl": 50.61,
+    "trades_today": 6,
     "is_capital_safe": true
   },
   "prop_firm": {
     "phase": "PHASE1",
     "target_pct": 8.0,
     "target_cash": 800.0,
-    "current_profit": 178.75,
-    "progress_pct": 22.34,
+    "current_profit": 128.75,
+    "progress_pct": 16.09,
     "daily_loss_limit_cash": 300.83,
     "daily_loss_buffer_remaining": 300.83,
     "max_drawdown_limit_cash": 650.0,
-    "max_drawdown_buffer_remaining": 828.75,
+    "max_drawdown_buffer_remaining": 761.43,
     "status": "ACTIVE"
   },
-  "open_positions": [],
+  "open_positions": [
+    {
+      "ticket": 5814285655,
+      "symbol": "AUDUSD",
+      "side": "SELL",
+      "volume": 0.85,
+      "price_open": 0.70304,
+      "sl": 0.70237,
+      "tp": 0.70396,
+      "profit": -15.3,
+      "comment": "PropGuard:75%"
+    },
+    {
+      "ticket": 5814285656,
+      "symbol": "AUDUSD",
+      "side": "SELL",
+      "volume": 0.85,
+      "price_open": 0.70305,
+      "sl": 0.70237,
+      "tp": 0.70396,
+      "profit": -16.15,
+      "comment": "PropGuard #5814285655"
+    },
+    {
+      "ticket": 5814285664,
+      "symbol": "XAUUSD",
+      "side": "SELL",
+      "volume": 0.03,
+      "price_open": 3996.2,
+      "sl": 4012.62,
+      "tp": 3968.87,
+      "profit": 6.99,
+      "comment": "PropGuard:98%"
+    },
+    {
+      "ticket": 5814285709,
+      "symbol": "XAUUSD",
+      "side": "SELL",
+      "volume": 0.03,
+      "price_open": 3996.25,
+      "sl": 4012.62,
+      "tp": 3968.87,
+      "profit": 7.14,
+      "comment": "PropGuard #5814285664"
+    }
+  ],
   "fleet_accounts": [
     {
       "firm": "Deriv Prop",
       "login": 6350807,
       "server": "Deriv-Demo",
-      "balance": 10178.75,
-      "equity": 10178.75,
+      "balance": 10128.75,
+      "equity": 10111.43,
       "riskPct": 0.5,
       "dailyBuf": 300.0,
-      "realized": 178.75,
-      "fee": 35.75,
+      "realized": 128.75,
+      "fee": 25.75,
       "status": "ACTIVE"
     }
   ],
@@ -62,7 +107,7 @@
       "action": "BUY",
       "confidence": 75.0,
       "market_quality": 70.04166859783525,
-      "reason": "15m trend agrees with 1h uptrend (Room: 1.5x ATR, ADX: 29.2)"
+      "reason": "15m trend agrees with 1h uptrend (Room: 1.6x ATR, ADX: 29.2)"
     },
     "USDCAD": {
       "action": "HOLD",
@@ -74,13 +119,13 @@
       "action": "HOLD",
       "confidence": 55,
       "market_quality": 89.0194003181444,
-      "reason": "No clean alignment: Upper rejection wick too large (40% > 35%) | Room to high blocked (0.4x < 1.0x ATR)"
+      "reason": "No clean alignment: Upper rejection wick too large (40% > 35%) | Room to high blocked (0.3x < 1.0x ATR)"
     },
     "NZDUSD": {
       "action": "BUY",
       "confidence": 70.0,
       "market_quality": 65.00674333474882,
-      "reason": "15m trend agrees with 1h uptrend (Room: 2.0x ATR, ADX: 21.8)"
+      "reason": "15m trend agrees with 1h uptrend (Room: 2.1x ATR, ADX: 21.8)"
     },
     "XAUUSD": {
       "action": "SELL",
@@ -114,6 +159,24 @@
     }
   },
   "recent_trades": [
+    {
+      "ticket": 5814285660,
+      "symbol": "NZDUSD",
+      "side": "BUY",
+      "volume": 1.0,
+      "entry_price": 50.0,
+      "exit_price": 0.56958,
+      "sl": 0.56919,
+      "tp": 0.57054,
+      "pnl": -25.0,
+      "outcome": "LOSS",
+      "open_time": "2026-10-23T17:09:32.262866+00:00",
+      "close_time": "2026-10-23T17:11:56.172791+00:00",
+      "features_json": "{\"symbol\": \"NZDUSD\", \"side\": \"BUY\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"indecision_<0.35\", \"session\": \"london_ny\", \"hour\": 17, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.0, \"timestamp\": \"2026-10-23T17:09:32.262866+00:00\"}",
+      "ai_autopsy": "The trade failed mechanically because initiating a long",
+      "lesson_learned": "The trade failed mechanically because initiating a long",
+      "created_at": "2026-10-23 17:11:56"
+    },
     {
       "ticket": 5814223467,
       "symbol": "GER40",
@@ -203,31 +266,13 @@
       "ai_autopsy": "This short-term sell order capitalized on a classic liquidity sweep as price spiked into neutral resistance during the London-NY crossover, instantly reversing due to weak trend momentum and low body conviction. The execution algorithm must remember that selling indecision candles within tight consolidation zones offers high-probability mean reversion when volatility is normal.",
       "lesson_learned": "This short-term sell order capitalized on a classic liquidity sweep as price spiked into neutral resistance during the London-NY crossover, instantly reversing due to weak trend momentum and low body conviction. The execution algorithm must remember that selling indecision candles within tight consolidation zones offers high-probability mean reversion when volatility is normal.",
       "created_at": "2026-10-22 10:20:32"
-    },
-    {
-      "ticket": 5812693684,
-      "symbol": "USDCHF",
-      "side": "SELL",
-      "volume": 0.3,
-      "entry_price": 50.0,
-      "exit_price": 10050.99,
-      "sl": 0.82141,
-      "tp": 0.8177,
-      "pnl": 10.0,
-      "outcome": "WIN",
-      "open_time": "2026-10-22T08:57:58.675298+00:00",
-      "close_time": "2026-10-22T09:06:47.288863+00:00",
-      "features_json": "{\"symbol\": \"USDCHF\", \"side\": \"SELL\", \"rsi_bucket\": \"neutral_45-55\", \"trend_gap_bucket\": \"weak_<0.25%\", \"volatility_regime\": \"normal\", \"body_conviction\": \"indecision_<0.35\", \"session\": \"london_ny\", \"hour\": 8, \"raw_rsi\": 50.0, \"raw_trend_gap\": 0.0, \"raw_atr_pct\": 0.0, \"raw_body_ratio\": 0.22, \"timestamp\": \"2026-10-22T08:57:58.675298+00:00\"}",
-      "ai_autopsy": "Constraints: Exactly 2 clear, powerful",
-      "lesson_learned": "Constraints: Exactly 2 clear, powerful",
-      "created_at": "2026-10-22 09:06:47"
     }
   ],
   "intelligence": {
     "wins": 9,
-    "losses": 0,
-    "win_rate": 100.0,
-    "total_trades": 9
+    "losses": 1,
+    "win_rate": 90.0,
+    "total_trades": 10
   },
-  "updated_at": "2026-10-23T17:08:59.221265+00:00"
+  "updated_at": "2026-10-23T17:12:06.351710+00:00"
 }

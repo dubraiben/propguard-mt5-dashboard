@@ -62,7 +62,7 @@
       "action": "BUY",
       "confidence": 75.0,
       "market_quality": 70.04166859783525,
-      "reason": "15m trend agrees with 1h uptrend (Room: 1.6x ATR, ADX: 29.2)"
+      "reason": "15m trend agrees with 1h uptrend (Room: 1.5x ATR, ADX: 29.2)"
     },
     "USDCAD": {
       "action": "HOLD",
@@ -80,13 +80,13 @@
       "action": "BUY",
       "confidence": 70.0,
       "market_quality": 65.00674333474882,
-      "reason": "15m trend agrees with 1h uptrend (Room: 2.1x ATR, ADX: 21.8)"
+      "reason": "15m trend agrees with 1h uptrend (Room: 2.0x ATR, ADX: 21.8)"
     },
     "XAUUSD": {
       "action": "SELL",
       "confidence": 98.0,
       "market_quality": 92.98521577665431,
-      "reason": "15m trend agrees with 1h downtrend (Room: 1.8x ATR, ADX: 36.3)"
+      "reason": "15m trend agrees with 1h downtrend (Room: 1.9x ATR, ADX: 36.3)"
     },
     "US30": {
       "action": "HOLD",
@@ -229,5 +229,5 @@
     "win_rate": 100.0,
     "total_trades": 9
   },
-  "updated_at": "2026-10-23T17:05:52.864030+00:00"
+  "updated_at": "2026-10-23T17:08:59.221265+00:00"
 }

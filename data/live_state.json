@@ -3,13 +3,13 @@
     "login": "PROP-50K-SANDBOX",
     "server": "Blue Guardian ($50k Unlimited)",
     "currency": "USD",
-    "balance": 50000.0,
-    "equity": 50000.0,
+    "balance": 50825.0,
+    "equity": 50825.0,
     "initial_size": 50000.0,
-    "net_profit": 0.0,
-    "net_profit_pct": 0.0,
-    "today_realized_pnl": 0.0,
-    "trades_today": 0,
+    "net_profit": 825.0,
+    "net_profit_pct": 1.65,
+    "today_realized_pnl": 825.0,
+    "trades_today": 1,
     "is_capital_safe": true
   },
   "prop_firm": {
@@ -17,8 +17,8 @@
     "phase": "PHASE1",
     "target_pct": 8.0,
     "target_cash": 4000.0,
-    "current_profit": 0.0,
-    "progress_pct": 0.0,
+    "current_profit": 825.0,
+    "progress_pct": 20.6,
     "daily_loss_limit_cash": 2000.0,
     "daily_loss_buffer_remaining": 2000.0,
     "max_drawdown_limit_cash": 4000.0,
@@ -31,11 +31,11 @@
       "firm": "Blue Guardian ($50k Unlimited)",
       "login": "SANDBOX-50K",
       "server": "Deriv Live Feed",
-      "balance": 50000.0,
-      "equity": 50000.0,
+      "balance": 50825.0,
+      "equity": 50825.0,
       "riskPct": 0.5,
       "dailyBuf": 2000.0,
-      "realized": 0.0,
+      "realized": 825.0,
       "fee": 0.0,
       "status": "ACTIVE"
     }
@@ -43,82 +43,108 @@
   "signals": {
     "XAUUSD": {
       "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 83.61479028697703,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakout (dist 0.8x ATR, room 1.8x) | Upper rejection wick too large (68%)"
+      "confidence": 50,
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "XAGUSD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 58.3327543876768,
-      "reason": "Market filter blocked weak setup: trend_gap=0.23%, atr_pct=0.32%, rsi=57.3, body=0.35"
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "DJI": {
       "action": "HOLD",
-      "confidence": 0,
-      "market_quality": 0,
-      "reason": "Not enough candles yet for indicator warm-up"
+      "confidence": 50,
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "GDAXI": {
       "action": "HOLD",
-      "confidence": 0,
-      "market_quality": 0,
-      "reason": "Not enough candles yet for indicator warm-up"
+      "confidence": 50,
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "NDX": {
       "action": "HOLD",
-      "confidence": 0,
-      "market_quality": 0,
-      "reason": "Not enough candles yet for indicator warm-up"
+      "confidence": 50,
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "BTCUSD": {
       "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 68.04206402614872,
-      "reason": "No clean alignment: Low ADX momentum (13.2 < 20.0) | Awaiting 20 EMA pullback or breakout (dist 1.1x ATR, room 3.1x)"
+      "confidence": 50,
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "ETHUSD": {
       "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 68.56550492964567,
-      "reason": "No clean alignment: Low ADX momentum (4.9 < 20.0) | Awaiting 20 EMA pullback or breakout (dist 1.3x ATR, room 3.4x)"
+      "confidence": 50,
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "EURUSD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 28.574680601397418,
-      "reason": "Market filter blocked weak setup: trend_gap=0.01%, atr_pct=0.06%, rsi=31.7, body=0.61"
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "GBPUSD": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 45.01953479004229,
-      "reason": "Market filter blocked weak setup: trend_gap=0.00%, atr_pct=0.06%, rsi=35.0, body=0.85"
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "USDJPY": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 19.932836024579547,
-      "reason": "Market filter blocked weak setup: trend_gap=0.02%, atr_pct=0.06%, rsi=70.4, body=0.26"
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "R_75": {
       "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 67.09264106038145,
-      "reason": "No clean alignment: Bollinger Band squeeze (width 1.25 <= p20 2.08) | Awaiting 20 EMA pullback or breakout (dist 0.3x ATR, room 1.1x)"
+      "confidence": 50,
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "R_100": {
       "action": "HOLD",
-      "confidence": 55,
-      "market_quality": 78.6601790892687,
-      "reason": "No clean alignment: Awaiting 20 EMA pullback or breakdown (dist 0.8x ATR, room 1.2x) | Lower rejection wick too large (43%)"
+      "confidence": 50,
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     },
     "R_50": {
       "action": "HOLD",
       "confidence": 50,
-      "market_quality": 51.921043384106014,
-      "reason": "Market filter blocked weak setup: trend_gap=0.08%, atr_pct=0.42%, rsi=38.3, body=0.61"
+      "market_quality": 50,
+      "reason": "Scanning active feed...",
+      "price": null,
+      "rsi": 50.0
     }
   },
-  "last_updated": "2026-11-05T09:19:00.806465+00:00"
+  "last_updated": "2026-11-05T10:24:17.286467+00:00"
 }
